@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A09-Jorge Gonzalez</title>
+</head>
+<body>
+    <script>
+        var frase = prompt("Introduce una frase: ");
+        var lista = frase.split(" ");
+        var longitud = lista.length;
+        for (pos in lista){
+            lista[pos] = lista[pos].trim();
+            if (pos == 0){
+                document.write("Primera palabra de la frase: " + lista[pos] + "<br>");
+            } else if (pos == longitud - 1){
+                document.write("Última palabra de la frase: " + lista[pos] + "<br>");
+            }
+        };
+        document.write("El número de palabras que contiene la frase es de: " + longitud)
+    </script>
+</body>
+</html>

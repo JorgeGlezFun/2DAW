@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U02-A16-Jorge Gonzalez</title>
+    <script src="U02-A16-Jorge Gonzalez.js"></script>
+</head>
+<body>
+    <script>
+        var numero = prompt("Introduce un número: ");
+        if (numero == "" || numero == " "){
+            numero = 0;
+        }
+        document.write("<h2>Tu numero es: " + numero + "</h2>");
+    </script>
+
+    <p> Selecciona a continuación lo que quieres hacer: </p>
+
+    <form>
+        <button onclick="entera(numero)">Pulsa aquí para sumar los enteros.</button>
+        <button onclick="decimal(numero)">Pulsa aquí para sumar todo el número.</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A18-Jorge Gonzalez</title>
+</head>
+<body>
+    <table border="1" align="center">
+        <tr>
+            <th colspan="4" id="res" align="right" style="height: 30px;"> </th>
+        </tr>
+        <tr align="right"></tr>
+        <tr align="center">
+            <td><button style="width: 50px; height: 50px;" onclick="raiz();">&#8730;</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="log()">log</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="pi()">&#960;</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="cubo()">x<sup>3</sup></button></td>
+        </tr>
+        <tr align="center">
+            <td><button style="width: 50px; height: 50px;" onclick="sin()">sin</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="cos()">cos</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="tan()">tan</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="cuadrado()">x<sup>2</sup></button></td>
+        </tr>
+        <tr align="center">
+            <td><button style="width: 50px; height: 50px;" onclick="c()">C</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('/')">/</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('*')">*</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="del()">DEL</button></td>
+        </tr>
+        <tr align="center">
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('7')">7</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('8')">8</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('9')">9</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('-')">-</button></td>
+        </tr>
+        <tr align="center">
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('4')">4</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('5')">5</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('6')">6</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('+')">+</button></td>
+        </tr>
+        <tr align="center">
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('1')">1</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('2')">2</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="anadir_numero('3')">3</button></td>
+            <td><button style="width: 50px; height: 50px;" onclick="res()">=</button></td>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><button style="width: 165px; height: 50px;" onclick="anadir_numero('0')">0</button></td>
+            <td colspan="2"><button style="width: 50px; height: 50px;" onclick="anadir_numero('.')">.</button></td>
+        </tr>
+    </table>
+    <script>
+        var numero = "";
+
+        function anadir_numero(n){
+            numero += n;
+            document.getElementById("res").innerHTML=numero;
+        }
+
+        function c(){
+            numero = "";
+            document.getElementById("res").innerHTML=numero;
+        };
+
+        function del(){
+            let longitud = numero.length;
+            numero = longitud > 1 ? numero.substring(0, longitud - 1) : numero = "";
+            document.getElementById("res").innerHTML=numero;
+        };
+
+        function res(){
+            resultado = eval(numero);
+            if (isNaN(resultado)) {
+                documento.getElementById("res").innerHTML="SyntaxError";
+            } else {
+                numero = eval(numero).toString();
+                document.getElementById("res").innerHTML=numero;
+            }
+        };
+
+        function sin(){
+            numero = Math.sin(eval(numero)).toString();
+            document.getElementById("res").innerHTML=numero;
+        };
+
+        function cos(){
+            numero = Math.cos(eval(numero)).toString();
+            document.getElementById("res").innerHTML=numero;
+        };
+
+        function tan(){
+            numero = Math.tan(eval(numero)).toString();
+            document.getElementById("res").innerHTML=numero;
+        };
+
+        function pi(){
+            numero = Math.PI.toString();
+            document.getElementById("res").innerHTML=numero;
+        };
+
+        function raiz(){
+            document.getElementById("res").innerHTML="&#8730;" + numero;
+            numero = Math.sqrt(numero).toString();
+        };
+
+        function log(){
+            numero = Math.log(numero).toString();
+            document.getElementById("res").innerHTML=numero;
+        };
+
+        function cuadrado(){
+            document.getElementById("res").innerHTML=numero + "<sup>3</sup>";
+            numero = numero ** 2;
+        };
+
+        function cubo(){
+            document.getElementById("res").innerHTML=numero + "<sup>3</sup>";
+            numero = numero ** 3;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U04-A04-Jorge Gonzalez</title>
+</head>
+<body>
+    <script>
+        var impares = new Array();
+        for (var i = 0; i <= 21; i++){
+            if (i % 2 == 1){
+                impares.push(i);
+            };
+        };
+        console.log(impares);
+        // a
+        var sumatorio = impares.reduce((acc, n) => acc + n);
+        console.log(sumatorio);
+        // b
+        console.log(impares.reverse());
+        // c
+        var buscador = parseInt(prompt("Introduce un número que quieras buscar: "));
+        if (impares.includes(buscador)) {
+            console.log("El número que has introducido se encuentra en el array.");
+        } else {
+            console.log("El número que has introducido no se encuentra en el array.");
+        };
+        // d
+        if (impares.includes(buscador)){
+            delete impares[impares.indexOf(buscador)];
+        };
+        console.log(impares);
+        // e
+        console.log(impares.sort());
+        console.log(impares.reverse());
+    </script>
+</body>
+</html>

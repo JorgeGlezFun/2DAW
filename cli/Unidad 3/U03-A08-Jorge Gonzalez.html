@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A08-Jorge Gonzalez</title>
+</head>
+<body>
+    <h1>Bienvenido a mi página</h1>
+    <p>
+        Aquí calcularemos el area de un circulo según el radio que le des o 
+        bien el area de un triangulo al cual le indiques su base y su altura.
+    </p>
+    <button onclick="area_circulo()">Pulsa aquí para calcular el area de un circulo</button>
+    <button onclick="area_triangulo()">Pulsa aquí para calcular el area de un triángulo</button>
+    <script>
+        function area_circulo(){
+            var radio = parseFloat(prompt("Introduce el radio del circulo: "));
+            var area = Math.round(Math.PI * radio ** 2);
+            document.write("El área del un círculo con radio " + radio + " cm es de: " + area + " cm2");
+        };
+
+        function area_triangulo(){
+            var base = parseFloat(prompt("Introduce la base del triangulo: "));
+            var altura = parseFloat(prompt("Introduce la altura del triangulo: "));
+            var area = Math.round((base * altura) / 2);
+            document.write("El área de un triángulo con base " + base + 
+                            " cm y altura " + altura + " cm, es de: " + area + " cm2");
+        };
+
+    </script>
+</body>
+</html>

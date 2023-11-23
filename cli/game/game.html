@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ñugotchi</title>
+    <script src="game.js"></script>
+    <script src="elementos.js"></script>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="estado">
+        <ul>
+           <li id="vida"></li>
+           <li id="estado"></li>
+           <li id="hambre"></li>
+           <li id="sed"></li>
+        </ul>
+    </div>
+    <section class="imagenBotones">
+        <img id="foto" src="ñu.jpg">
+        <table>
+            <tr>
+                <td>
+                    <button onclick="alimentar()">Alimentar</button>
+                </td>
+                <td>
+                    <button onclick="comidas()">▼</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="desplegables"><div id="contenedorComidas"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="darbebida()">Dar de beber</button>
+                </td>
+                <td>
+                    <button onclick="bebidas()">▼</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="desplegables"><div id="contenedorBebidas"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="jugar()">Jugar</button>
+                </td>
+                <td>
+                    <button onclick="juegos()">▼</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="desplegables"><div id="contenedorJuegos"></div></td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

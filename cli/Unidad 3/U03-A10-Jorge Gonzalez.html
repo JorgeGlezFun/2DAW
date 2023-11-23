@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A10-Jorge Gonzalez</title>
+</head>
+<body>
+    <script>
+        var frase = prompt("Introduce una frase: ");
+        // var array = frase.split("");
+        // document.write(array + "<br>")
+        var inicio = prompt("Introduce la marca de inicio: ");
+        var indice_inicio = frase.indexOf(inicio);
+        var fin = prompt("Introduce la marca de fin: ");
+        var indice_fin = frase.indexOf(fin);
+        var f_extraida = frase.slice(indice_inicio, indice_fin + 1);
+        document.write("La frase completa introducida es: " + frase + "<br>");
+        document.write("La frase extraida es: " + f_extraida);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A17-Jorge Gonzalez</title>
+</head>
+<body>
+    <textarea id="texto" style="width: 200px; height: 200px;"></textarea> <br>
+    <button onclick="primera()">Enviar</button>
+    <script>
+        function primera(){
+            var frase = document.getElementById("texto").value;
+            var regex = new RegExp(/^\b[A-Z][a-z]+/gm);
+            var primeras_palabras = frase.match(regex);
+            var longitud = primeras_palabras.length;
+            for (var i = 0; i < longitud; i++){
+                document.write("<h1>"+ primeras_palabras[i] + "</h1>")
+            }
+        }
+
+    </script>
+</body>
+</html>

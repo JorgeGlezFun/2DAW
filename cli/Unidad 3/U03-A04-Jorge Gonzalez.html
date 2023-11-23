@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A04-Jorge Gonzalez</title>
+</head>
+<body>
+    <div id="tiempo">
+        <h1></h1>
+    </div>
+    <script>
+        var tiempo = new Date();
+        var reloj = tiempo.getHours()+":"+tiempo.getMinutes()+":"+tiempo.getSeconds();
+        var hora = 23;
+        var saludo = (hora >= 6 && hora < 12) ? "Buenos días":
+                     (hora >= 12 && hora < 21) ? "Buenas tardes":
+                     (hora >= 21 || hora < 6) ? "Buenas noches": null;
+        document.getElementById("tiempo").innerHTML=saludo;
+    </script>
+</body>
+</html>

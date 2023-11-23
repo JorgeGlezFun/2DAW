@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>U02-A06-Jorge Gonzalez</title>
+</head>
+<body>
+    <div>
+        <h2 id="aviso"></h2>
+        <div id="eleccion_notas"></div>
+    </div>
+    <script>
+        alert("Bienvenido al mejor ejercicio de HTML/JavaScript que has visto en tu vida.");
+        
+        var nota=parseInt(prompt("¿Que nota le vas a poner a este ejercicio? (Elige del 1 al 10): " ));
+        
+        document.getElementById("aviso").innerHTML=("Antes que nada, he de decirte que este ejercicio merece un 10.");
+        document.write ("<h2>El resultado de tus respuestas es: </h2>"); 
+        
+        var nota_negativa=nota;
+        
+        if (nota == 10){document.write ("<p>Así es, lo sabes bien, este ejercicio no merece menos que un 10.</p>")}
+        else {document.write ("<p>No te preocupes, sé que seguro te has equivocado de número y querías poner un 10 y no un "+ nota_negativa +".</p>")};
+
+        var pregunta=confirm("¿Le darás a esta actividad un 10? (Si es un si, pulsa aceptar. Si es un no, pulsa cancelar).");
+
+        var respuesta;
+
+        if (pregunta){respuesta="Sabía que ibas a elegir la opción correcta."}
+        else {respuesta="Has elegido sin quererlo la opcion de cancelar, pero no te preocupes, se que querias decir que me pones un 10 en la actividad."};
+        
+        document.write(respuesta);
+
+        console.log("Yo soy un dato oculto, si me has encontrado es porque sabes de JS o HTML, o bien ambos.")
+    </script>
+</body>
+</html>

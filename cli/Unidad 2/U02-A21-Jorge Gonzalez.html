@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U02-A21-Jorge Gonzalez</title>
+    <script src="U02-A21-Jorge Gonzalez.js"></script>
+</head>
+<body>
+    <script>
+        var valor = prompt("Introduce un valor");
+        if (isNaN(valor)){
+            valor = valor.toLowerCase();
+        };
+        document.write("<h2>El valor que has introducido es: " + valor  + "</h2>")
+    </script>
+    <form action="">
+        <button onclick=aString(valor)>Pulsa aquí para pasar a cadena.</button>
+        <button onclick=aBooleano(valor)>Pulsa aquí para pasar a booleano.</button>
+        <button onclick=aNumero(valor)>Pulsa aquí para pasar a número.</button>
+    </form>
+</body>
+</html>

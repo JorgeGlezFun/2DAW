@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco 2</title>
+</head>
+<body>
+    <form>
+        <input type="Button" value="Cambiar Color" onclick="modificar_color()">
+    </form>
+    <script>
+        function modificar_color(){
+            campoColor = parent.marco1.document.formulario.colores;
+            if(campoColor.selectedIndex==0)
+            {
+                color = 'green';
+            } else {
+                color = 'blue';
+            }
+            campoFrame = parent.marco1.document.formulario.posicion;
+            if(campoFrame.selectedIndex==0){
+                window.parent.marco1.document.bgColor = color;
+            } else {
+                window.parent.marco2.document.bgColor = color;
+            }
+        }
+    </script>
+</body>
+</html>

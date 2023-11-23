@@ -1,0 +1,12 @@
+.cabecera {
+    width: 1920px;
+    height: 75px;
+}
+header {
+    background: black;
+}
+nav li{
+    color: #EFB810;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline;
+}

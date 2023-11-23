@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U04-A05-Jorge Gonzalez</title>
+</head>
+
+<body>
+    <script>
+        var arrayPalabras = new Array();
+        var nPalabras = parseInt(prompt("Introduce el tamaño del array: "));
+        if (isNaN(nPalabras) || nPalabras == 0){
+            document.write("Introduce un número válido.");
+        } else {
+            while (nPalabras != 0) {
+                var palabra = prompt("Introduce una palabra: ");
+                arrayPalabras.push(palabra);
+                nPalabras--;    
+            }
+            // a
+            document.write(arrayPalabras + "<br>"); 
+            // b
+            document.write(arrayPalabras.reverse() + "<br>"); 
+            arrayPalabras.reverse();
+            // c
+            document.write(arrayPalabras[0] + "<br>"); 
+            // d
+            document.write(arrayPalabras[arrayPalabras.length - 1] + "<br>"); 
+            // e
+            document.write(arrayPalabras.length + "<br>"); 
+            // f
+            document.write(arrayPalabras.sort() + "<br>"); 
+            // g
+            document.write(arrayPalabras.sort().reverse() + "<br>"); 
+        }
+    </script>
+</body>
+</html>

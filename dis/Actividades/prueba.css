@@ -1,0 +1,757 @@
+#primary_nav_wrap {
+    margin-top: 15px
+}
+
+#primary_nav_wrap ul {
+    list-style: none;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0
+}
+
+#primary_nav_wrap ul a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 0 15px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+#primary_nav_wrap ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0
+}
+
+#primary_nav_wrap ul li.current-menuitem {
+    background: #ddd
+}
+
+#primary_nav_wrap ul li:hover {
+    background: #f6f6f6
+}
+
+#primary_nav_wrap ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    padding: 0
+}
+
+#primary_nav_wrap ul ul li {
+    float: none;
+    width: 200px
+}
+
+#primary_nav_wrap ul ul a {
+    line-height: 120%;
+    padding: 10px 15px
+}
+
+#primary_nav_wrap ul ul ul {
+    top: 0;
+    left: 100%
+}
+
+#primary_nav_wrap ul li:hover>ul {
+    display: block
+}
+
+.container {
+    position: relative;
+}
+
+.caja {
+    width: 180px;
+    height: 180px;
+    color: #FFF;
+    text-align: center;
+    line-height: 180px;
+    margin: 15px;
+    float: left;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.caja1 {
+    background-color: #C0392B;
+    cursor: crosshair;
+    transition: background-color 1s linear;
+
+}
+
+.caja1:hover {
+    background-color: #3F51B5;
+}
+
+.caja2 {
+    background-color: #9B59B6;
+    cursor: help;
+}
+
+.caja3 {
+    background-color: #2980B9;
+    cursor: move;
+}
+
+.caja4 {
+    background-color: #3498DB;
+    cursor: pointer;
+}
+
+.caja5 {
+    background-color: #17A589;
+    cursor: progress;
+}
+
+.caja6 {
+    background-color: #F1C40F;
+    cursor: text;
+}
+
+.caja7 {
+    background-color: #E67E22;
+    cursor: wait;
+}
+
+.caja8 {
+    background-color: #95A5A6;
+    cursor: vertical-text;
+}
+
+.caja9 {
+    background-color: #2C3E50;
+    cursor: alias;
+}
+
+.caja10 {
+    background-color: grey;
+    cursor: no-drop;
+}
+
+.caja11 {
+    background-color: black;
+    cursor: grab;
+}
+
+.caja12 {
+    background-color: #C0392B;
+    cursor: grabbing;
+}
+
+.caja13 {
+    background-color: #9B59B6;
+    cursor: zoom-in;
+}
+
+.caja14 {
+    background-color: #2980B9;
+    cursor: zoom-out
+}
+
+.caja15 {
+    background-color: #3498DB;
+    cursor: not-allowed;
+}
+
+.caja16 {
+    background-color: #17A589;
+    cursor: progress;
+}
+
+.caja17 {
+    background-color: #F1C40F;
+    cursor: copy
+}
+
+.caja18 {
+    background-color: #E67E22;
+    cursor: ew-resize;
+}
+
+.caja19 {
+    background-color: #95A5A6;
+    cursor: ns-resize;
+}
+
+.caja20 {
+    background-color: #2C3E50;
+    cursor: nwse-resize;
+}
+
+.caja21 {
+    background-color: grey;
+    cursor: nesw-resize;
+}
+
+.caja21 {
+    background-color: black;
+    cursor: nesw-resize;
+}
+
+.caja26 {
+    background-color: #C0392B;
+    cursor: url(https://cdn-iconspng.flaticon.com/128/2662/2662839.png), pointer;
+}
+
+.caja21 {
+    background-color: #9B59B6;
+    cursor: nesw-resize;
+}
+
+.caja22 {
+    background-color: #2980B9;
+    cursor: col-resize;
+}
+
+.caja23 {
+    background-color: #3498DB;
+    cursor: row-resize;
+}
+
+.caja24 {
+    background-color: #17A589;
+    cursor: context-menu;
+}
+
+.caja25 {
+    background-color: #E67E22;
+    cursor: none;
+}
+
+.caja26 {
+    background-color: #95A5A6;
+    cursor: url(https://cdn-iconspng.flaticon.com/128/2662/2662839.png), pointer;
+}
+
+.my-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.my-button:hover {
+    background-color: #45a049;
+}
+
+.my-button:active {
+    background-color: #3e8e41;
+}
+
+.btn {
+    border: none;
+    color: black;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.primary {
+    background-color: white;
+    border: 2px solid #007bff;
+}
+
+.primary:hover {
+    background: #0b7dda;
+    color: white;
+}
+
+.secondary {
+    background-color: white;
+    border: 2px solid #e7e7e7;
+}
+
+.secondary:hover {
+    background: #ddd;
+    color: white;
+}
+
+.success {
+    background-color: white;
+    border: 2px solid #04AA6D;
+}
+
+.success:hover {
+    background-color: #46a049;
+    color: white;
+}
+
+.warning {
+    background-color: white;
+    border: 2px solid #ff9800;
+}
+
+.warning:hover {
+    background: #e68a00;
+    color: white;
+}
+
+.danger {
+    background-color: white;
+    border: 2px solid #f44336;
+}
+
+.danger:hover {
+    background: #da190b;
+    color: white;
+}
+
+.btn-block {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {
+    display: inline;
+}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 9px 18px;
+    text-decoration: none;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.pagination li a.active:hover {
+    background-color: #397f3b;
+}
+
+ul.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+ul.breadcrumb {
+    padding: 8px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb a:link,
+ul.breadcrumb a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+ul.breadcrumb li a.active {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+ul.breadcrumb li a.active:hover {
+    color: #397f3b;
+    font-weight: bold;
+}
+
+.container1 {
+    position: relative;
+}
+
+.caja99 {
+    width: 180px;
+    height: 180px;
+    background-color: #30B037;
+    color: #FFF;
+    text-align: center;
+    line-height: 180px;
+    margin: 15px;
+    float: left;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.caja100 {
+    background-color: #C0392B;
+    -webkit-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+}
+
+.caja100:hover {
+    background-color: #3F51B5;
+}
+
+.caja200 {
+    background-color: #9B59B6;
+    -webkit-transition: font-size 1s ease;
+    transition: font-size 1s ease;
+}
+
+.caja200:hover {
+    font-size: 28px;
+}
+
+.caja300 {
+    background-color: #2980B9;
+    -webkit-transition: color 1s linear;
+    transition: color 1s linear;
+}
+
+.caja300:hover {
+    color: yellow;
+}
+
+.caja400 {
+    background-color: #3498DB;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+}
+
+.caja400:hover {
+    line-height: 300px;
+}
+
+.caja500 {
+    border-radius: 0px;
+    background-color: #17A589;
+    -webkit-transition: 1s linear;
+    transition: 1s linear
+}
+
+.caja500:hover {
+    border-radius: 20px;
+}
+
+.caja600 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: #F1C40F;
+}
+
+.caja600:hover {
+    -webkit-box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+}
+
+.caja700 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: #E67E22;
+}
+
+.caja700:hover {
+    opacity: 0.3;
+}
+
+.caja800 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: #95A5A6;
+}
+
+.caja800:hover {
+    border-style: solid;
+    border-color: #95A5A6;
+    border-color: #000;
+}
+
+.caja900 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: #2C3E50;
+}
+
+.caja900:hover {
+    margin: 80px;
+}
+
+.caja1000 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: black;
+}
+
+.caja1000:hover {
+    padding: 30px;
+}
+
+/* Menú horizontal con transiciones */
+
+/* Formato general de cada item */
+.menu {
+    display: block;
+    position: relative;
+    height: 76px;
+    width: 120px;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Bordes superiores */
+.menu.servicios {
+    border-top: #ffc000 0.3em solid;
+}
+
+.menu.recursos {
+    border-top: #b81800 0.3em solid;
+}
+
+.menu.proyectos {
+    border-top: #00a53c 0.3em solid;
+}
+
+.menu.contacto {
+    border-top: #9600b4 0.3em solid;
+}
+
+/* Atributos y transición */
+.menu>span {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+}
+
+.menu:after,
+.menu>span>span {
+    display: block;
+    text-align: center;
+    border-radius: 0em;
+    padding: 2em 0 1.5em;
+}
+
+.menu:after {
+    content: attr(data-title);
+    width: 100%;
+    background: #000;
+    color: #fff;
+}
+
+.menu>span>span {
+    width: 120px;
+    color: #fff;
+}
+
+.menu.servicios>span>span {
+    background: #ffc000;
+}
+
+.menu.proyectos>span>span {
+    background: #00a53c;
+}
+
+.menu.recursos>span>span {
+    background: #b81800;
+}
+
+.menu.contacto>span>span {
+    background: #9600b4;
+}
+
+/* Lo que pasa con hover */
+.menu:hover>span {
+    height: 100%;
+}
+
+/* Dando formato a lista */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: inline;
+    float: left;
+    text-decoration: none;
+    font-family: sans;
+}
+
+.container2 {
+    position: relative;
+}
+
+.caja88 {
+    width: 180px;
+    height: 180px;
+    color: #FFF;
+    text-align: center;
+    line-height: 180px;
+    margin: 15px;
+    float: left;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.caja188 {
+    background-color: #C0392B;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+}
+
+.caja188:hover {
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+}
+
+.caja288 {
+    background-color: #9B59B6;
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
+}
+
+.caja288:hover {
+    -webkit-transform: rotate(1800000deg);
+    transform: rotate(1800000deg);
+}
+
+.caja388 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: #2980B9;
+}
+
+.caja388:hover {
+    -webkit-transform: translate(10%);
+    transform: translate(10%);
+}
+
+.caja488 {
+    background-color: #3498DB;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+}
+
+.caja488:hover {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+}
+
+.caja588 {
+    background-color: #17A589;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+}
+
+.caja588:hover {
+    -webkit-transform: skewY(10deg);
+    transform: skewY(10deg);
+}
+
+.caja688 {
+    background-color: #F1C40F;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+}
+
+.caja688:hover {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+}
+
+.caja788 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: #E67E22;
+}
+
+.caja788:hover {
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.caja888 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: #95A5A6;
+}
+
+.caja888:hover {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+}
+
+.caja988 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: #2C3E50;
+}
+
+.caja988:hover {
+    -webkit-transform: perspective(150px) rotateX(45deg);
+    transform: perspective(150px) rotateX(45deg);
+}
+
+.caja1088 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: grey;
+}
+
+.caja1088:hover {
+    -webkit-transform: perspective(150px) rotateY(45deg);
+    transform: perspective(150px) rotateY(45deg);
+}
+
+.caja1188 {
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: black;
+}
+
+.caja1188:hover {
+    -webkit-transform: matrix(0.5, 0.1, 0.5, 1, 10, -2);
+    transform: matrix(0.5, 0.1, 0.5, 1, 10, -2);
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -400%;
+    /* Posiciona el tooltip encima
+    del elemento */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}

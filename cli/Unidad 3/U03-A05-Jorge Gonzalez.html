@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A05-Jorge Gonzalez</title>
+</head>
+<body>
+    <h1 id="reloj"></h1>
+    <script>
+        function reloj(){
+            var tiempo = new Date;
+            var reloj = tiempo.getHours().toString().padStart(2, "0") + ":" + tiempo.getMinutes().toString().padStart(2, "0") + ":" + tiempo.getSeconds().toString().padStart(2, "0")
+            document.getElementById("reloj").innerHTML=reloj;
+        }
+        setInterval(reloj, 1000)
+    </script>
+</body>
+</html>

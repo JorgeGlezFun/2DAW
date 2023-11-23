@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A16-Jorge Gonzalez</title>
+</head>
+<body>
+    <script>
+        var fecha = prompt("Introduce el nombre de un día de la semana y el número de este: ");
+        var expr = new RegExp(/^(lunes|martes|miercoles|jueves|viernes|sabado|domingo)\s{1}\([0-9]|[0-2][0-9]|[0-3][0-1]$/);
+        if (expr.test(fecha)) {
+            alert("El formato introducido es correcto.")
+        } else {
+            alert("El formato introducido es incorrecto")
+        }
+    </script>
+</body>
+</html>

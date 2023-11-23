@@ -1,0 +1,79 @@
+header {
+    background-color: black;
+    width: 100%;
+}
+.navegacion {
+    margin-top: 15px;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+.cabecera {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-weight: lighter;
+}
+.titulo {
+    color: #222222;
+    margin-left: 25%;
+    text-align: justify;
+}
+
+.resumen {
+    border-bottom: #3B3B3B 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-align: justify;
+    color: #222222;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.texto {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: justify;
+
+}
+.imagen {
+    width: 800px;
+    height: 550px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+li {
+    display: inline;
+    margin-right: 20px;
+}
+li:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #CC0000;
+}
+a{
+    color: #CC0000;
+}
+a:hover{
+    color: #222222;
+}
+iframe{
+    width: 800px;
+    height: 550px;
+    align-content: center;
+    margin-left: 32%;
+    margin-right: 25%;
+}
+footer{
+    background-color: #3B3B3B;
+    padding: 50px;
+    font-size: 10px;
+    font-family: Ari;
+    color: #FFFFFF;
+    position: static;
+}

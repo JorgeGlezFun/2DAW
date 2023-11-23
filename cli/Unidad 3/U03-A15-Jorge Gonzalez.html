@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A15-Jorge Gonzalez</title>
+</head>
+<body>
+    <script>
+        var form = prompt("Introduce el formulario en formato '0000 AAA' (espacio incluido): ");
+        var formulario = new RegExp(/^\d{4}\s{1}\w{3}$/);
+        if (formulario.test(form)) {
+            alert("El formato introducido es correcto.")
+        } else {
+            alert("El formato introducido es incorrecto")
+        }
+    </script>
+</body>
+</html>

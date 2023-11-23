@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A12-Jorge Gonzalez</title>
+</head>
+<body>
+    <script>
+        var frase = prompt("Introduce una frase: ");
+        var lista = frase.split(" ");
+        var palabra = prompt("Introduce una palabra: ");
+        var longitud = palabra.length;
+        if (lista.includes(palabra)) {
+            var indice = lista.indexOf(palabra);
+            document.write("El contenido antigüo del array era: " + lista + "<br>");
+            lista = lista.join(", ")
+            lista = lista.replace(palabra, "dwecl");
+            lista = lista.split(", ");
+            document.write("La palabra '" + palabra + "'" + " está formada por " + longitud + " carácteres. <br>")
+            document.write("El contenido nuevo del array es: " + lista + "<br>")
+        } else {
+            document.write("La palabra introducida no aparece en la frase.")
+        }
+    </script>
+</body>
+</html>

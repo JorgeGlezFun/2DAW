@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A01-Jorge Gonzalez</title>
+</head>
+<body>
+    <script>
+        var fecha_actual = new Date();
+        var fecha_fin_de_anyo = new Date(2023, 11, 31);
+        var diferencia_dias = Math.round((fecha_fin_de_anyo - fecha_actual) / 1000 / 60 / 60 / 24);
+        var diferencia_milisegundos = fecha_fin_de_anyo - fecha_actual;
+        var fecha_actual_completa = fecha_actual.getDate() + "/" + (fecha_actual.getMonth() + 1) + "/" + fecha_actual.getFullYear();
+        var fecha_fin_de_anyo_completa = fecha_fin_de_anyo.getDate() + "/" + (fecha_fin_de_anyo.getMonth() + 1) + "/" + fecha_fin_de_anyo.getFullYear();
+        document.write("Los días que quedan para fin de año son: " + diferencia_dias + " días. <br>");
+        document.write("La diferencia en milisegundos entre: " + fecha_actual_completa + " y " + fecha_fin_de_anyo_completa +
+        " es de " + diferencia_milisegundos + " milisegundos.");
+    </script>
+</body>
+</html>

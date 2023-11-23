@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Actividad 1.css">
+</head>
+<body>
+    <form action="get">
+        <label for="dni">DNI</label>
+        <input type="text" pattern="^[1-9]{2}.{1}[1-9]{3}.{1}[1-9]{3}-{1}\w{1}$" required>
+        <br>
+        <label for="">Nombre</label>
+        <input type="text" pattern="" required>
+        <br>
+        <label for="">Fecha de nacimiento</label>
+        <input type="date" min="1900-01-01" max="2024-01-01" required>
+        <br>
+        <label>Contraseña</label>
+        <input type="password" pattern="\w{8,10}" required>
+        <br>
+        <label for="">E-Mail</label>
+        <input type="email" pattern="^\w{5,20}@{1}\w{5,20}.{1}\w{2,3}$" required>
+        <br>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U04-A01-Jorge Gonzalez</title>
+</head>
+<body>
+    <script>
+        var objeto = {
+            'patata': 3,
+            'anemia': 6,
+            'maradona': 1,
+        }
+        function ordenaIndices(tabla){
+            var claves = Object.keys(tabla);
+            claves.sort();
+            for (i = 0; i < claves.length; i++){
+                console.log(claves[i] + ' ' + tabla[claves[i]]);
+            }
+        }
+        console.log(ordenaIndices(objeto));
+    </script>
+</body>
+</html>

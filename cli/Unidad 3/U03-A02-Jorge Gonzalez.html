@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A02-Jorge Gonzalez</title>
+</head>
+<body>
+    <script>
+        var fn_dia = parseInt(prompt("Introduce el dia que naciste: "));
+        var fn_mes = parseInt(prompt("Introduce el mes que naciste (en números): "));
+        var fn_anyo = parseInt(prompt("Introduce el año que naciste: "));
+        var fecha_actual = new Date();
+        var fecha_nacimiento = new Date(fn_anyo, fn_mes, fn_dia);
+        var edad = Math.round((fecha_actual - fecha_nacimiento) / 1000 / 60 / 60 / 24 / 365);
+        document.write("Tu edad es de: " + edad + " años. <br>");
+    </script>
+</body>
+</html>

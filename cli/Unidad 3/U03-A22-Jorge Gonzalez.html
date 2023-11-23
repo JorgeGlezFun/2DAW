@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="texto">Texto a agrandar, reducir o dejar de la forma original</p>
+    <button onclick="agrandar()">Agrandar</button>
+    <button onclick="reducir()">Reducir</button>
+    <button onclick="original()">Original</button>
+    <script>
+        var tamano_fuente = 20;
+
+        function agrandar(){
+            tamano_fuente += 1;
+            document.getElementById("texto").style.fontSize = tamano_fuente + "px";
+        }
+        function reducir(){
+            tamano_fuente -= 1;
+            document.getElementById("texto").style.fontSize = tamano_fuente + "px";
+        }
+        function original(){
+            tamano_fuente = 20;
+            document.getElementById("texto").style.fontSize = tamano_fuente + "px";
+        }
+    </script>
+</body>
+</html>

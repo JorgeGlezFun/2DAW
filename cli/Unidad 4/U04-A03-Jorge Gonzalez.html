@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U04-A03-Jorge Gonzalez</title>
+</head>
+<body>
+    <script>
+        var lista = new Array()
+        for (i = 0; i < 10; i++){
+            lista.push(Math.floor(Math.random() * 1000));
+        };
+        lista.sort();
+        var mayor = 0;
+        var menor = 1001;
+        for (num1 of lista){
+            for (num2 of lista){
+                if (mayor < num2){
+                    mayor = num2;
+                }
+                if (menor > num2){
+                    menor = num2;
+                }
+            }
+        }
+        function quitaMaxyMin(e){
+            return (e > menor && e < mayor)
+        }
+        var nuevaLista = lista.filter(quitaMaxyMin);
+        console.log(lista);
+        console.log(nuevaLista);
+    </script>
+</body>
+</html>
