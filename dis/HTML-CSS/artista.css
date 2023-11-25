@@ -83,7 +83,7 @@ img {
     background: rgba(255,255,255,0.5);
 }
 
-.infoEstudio {
+.infoArtista {
     text-align: justify;
     margin-left: 35px;
     margin-right: 20px;
@@ -91,18 +91,24 @@ img {
     color: #000000;
 }
 
-.infoEstudio h1{
+.infoArtista h1{
     font-family: 'Josefin Slab';
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 35px;
 }
 
-.infoEstudio p{
+.infoArtista p{
     font-family: 'Josefin Slab';
     font-size: 20px;
 }
 
-.infoEstudio li{
+.infoArtista blockquote{
+    font-family: 'Josefin Slab';
+    font-size: 20px;
+    font-style: italic;
+}
+
+.infoArtista li{
     font-family: 'Josefin Slab';
     font-size: 20px;
 }
