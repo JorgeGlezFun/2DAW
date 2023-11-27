@@ -134,3 +134,107 @@ function darbebida(){
         informacion()
     }
 }
+
+
+// Codigo para el despliegue de botones
+var desplegado = false; 
+
+// Crea los botones de comida
+function comidas(){
+    var contenedorBotones = document.getElementById("contenedorComidas");
+    contenedorBotones.innerHTML = "";
+
+    if (!desplegado){
+        var boton1 = document.createElement("button");
+        boton1.innerHTML = "Kebab";
+
+        var boton2 = document.createElement("button");
+        boton2.innerHTML = "Pollo asado";
+
+        var boton3 = document.createElement("button");
+        boton3.innerHTML = "Macarrones con tomatico";
+
+        contenedorBotones.appendChild(boton1);
+        contenedorBotones.appendChild(boton2);
+        contenedorBotones.appendChild(boton3);
+
+        desplegado = true;
+    } else {
+        desplegado = false;
+    }
+}
+
+// Crea los botones de bebida
+function bebidas(){
+    var contenedorBotones = document.getElementById("contenedorBebidas");
+    contenedorBotones.innerHTML = "";
+
+    if (!desplegado){
+        var boton1 = document.createElement("button");
+        boton1.innerHTML = "Agua";
+
+        var boton2 = document.createElement("button");
+        boton2.innerHTML = "Ron cola";
+
+        var boton3 = document.createElement("button");
+        boton3.innerHTML = "Vodka";
+
+        contenedorBotones.appendChild(boton1);
+        contenedorBotones.appendChild(boton2);
+        contenedorBotones.appendChild(boton3);
+
+        desplegado = true;
+    } else {
+        desplegado = false;
+    }
+}
+
+// Crea los botones de juego
+function juegos(){
+    var contenedorBotones = document.getElementById("contenedorJuegos");
+    contenedorBotones.innerHTML = "";
+
+    if (!desplegado){
+        var boton1 = document.createElement("button");
+        boton1.innerHTML = "Ahorcado";
+
+        var boton2 = document.createElement("button");
+        boton2.innerHTML = "Juego matemático";
+        contenedorBotones.appendChild(boton1);
+        contenedorBotones.appendChild(boton2);
+
+        desplegado = true;
+    } else {
+        desplegado = false;
+    }
+}
+
+// Creacion del ahorcado
+function ahorcado(){
+    var palabras = [
+        'Hola',
+        'Adios',
+        'Pepe'
+    ]
+
+    let longitud = palabras.length;
+
+    var indice = Math.floor(Math.random() * longitud);
+
+    let palabra = palabras[indice].toUpperCase();
+
+    let longitudPalabra = palabra.length;
+    console.log(palabra)
+
+    var letra = prompt('Introduce una letra: ').toUpperCase();
+
+    var solucion = '_'.repeat(longitudPalabra).split("");
+    
+    if (palabra.includes(letra)){
+        
+    }
+    
+    console.log(solucion);
+
+
+}
