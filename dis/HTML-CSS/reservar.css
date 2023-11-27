@@ -60,17 +60,19 @@ body {
 
 section {
     position: absolute;
-    width: 640px;
-    height: 800px;
-    top: 75px;
+    width: 920px;
+    height: 850px;
+    top: 115px;
+    bottom: 75px;
     display: inline-block;
-    background: ;
-}
-
-.artista {
+    background: #000000;
     left: 640px;
+    border-radius: 20px;
 }
 
+label{
+    color: #FFFFFF;
+}
 /* Elemenos pie de pagina */
 footer {
     background: #000000;
