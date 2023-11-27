@@ -61,18 +61,44 @@ body {
 section {
     position: absolute;
     width: 920px;
-    height: 850px;
-    top: 115px;
+    height: 750px;
+    top: 100px;
     bottom: 75px;
     display: inline-block;
     background: #000000;
-    left: 640px;
+    left: 560px;
     border-radius: 20px;
 }
 
-label{
+section form{
+    position: relative;
+    font-size: 20px;
     color: #FFFFFF;
+    top: 50px;
+    margin-left: 50px;
 }
+
+section input[type="text"]{
+    margin-bottom: 10px;
+    width: 765px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#tamanyo {
+    margin-bottom: 10px;
+    width: 115px;
+    height: 30px;
+    font-size: 20px;
+}
+
+section input[type="date"]{
+    margin-bottom: 10px;
+    width: 166px;
+    height: 30px;
+    font-size: 20px;
+}
+
 /* Elemenos pie de pagina */
 footer {
     background: #000000;
