@@ -61,7 +61,3 @@ table {
     position: absolute;
     width: 400px;
 }
-
-.desplegables {
-    column-span: all;
-}

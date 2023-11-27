@@ -93,7 +93,7 @@ function estados(){
         }
     }
 
-    // Si la vida llega o baja de 0, se paran los intervalos
+    // Si la vida llega o baja de 0, se paran los intervalos y cambia la imagen
     if (vida <= 0) {
         vida = 0;
         estado[0] = "Muerto";
