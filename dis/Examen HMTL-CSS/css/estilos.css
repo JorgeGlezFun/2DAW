@@ -1,0 +1,168 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000078;
+}
+
+/*Elementos cabecera*/
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 120px;
+}
+header img {
+    float: left;
+    margin-left: 200px;
+    height: 50px;
+    width: 150px;
+}
+
+header nav ul {
+    margin-right: 200px;
+    text-align: right;
+}
+
+header nav ul li{
+    display: inline-block;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+.activo {
+    text-decoration: underline;
+    text-decoration-color: #FFE000;
+    text-decoration-thickness: 2px;
+}
+
+/*Elementos cuerpo*/
+/*index.hmtl*/
+.seccion1 {
+    position: absolute;
+    top: 75px;
+    left: 200px;
+    width: 100%;
+    margin-left: 20%;
+}
+
+.seccion1 div {
+    width: 300px;
+}
+
+.seccion1 iframe {
+    position: absolute;
+    margin-left: 20%;
+    top: 20px;
+    width: 400px;
+    height: 250px;
+}
+
+.seccion1 div h1{
+    font-size: 40px;
+}
+
+.seccion1 div a{
+    font-size: 16px;
+    text-decoration: none;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: #FFE000;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.seccion2 {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    background-color: #F0F0F0;
+    width: 100%;
+    text-align: center;
+}
+
+.seccion2 p {
+    display: inline-block;
+    margin-right: 75px;
+    font-weight: 600;
+}
+
+.seccion3 {
+    position: absolute;
+    top: 550px;
+    align-items: center;
+    text-align: center;
+    margin-left: 35%;
+}
+
+.cajas {
+    width: 560px;
+    height: 40px;
+    border-bottom: thin solid #D0D0D0;
+    border-right: thin solid #D0D0D0;
+}
+
+.seccion3 div p {
+    text-align: left;
+}
+
+/*ultimos-envios.html*/
+
+.seccionTabla {
+    position: absolute;
+    margin-left: 10%;
+    top: 75px;
+}
+
+table {
+    table-layout: fixed;
+    text-align: center;
+}
+
+table th {
+    background: #FFFFFF;
+    text-align: left;
+    font-size: 40px;
+    height: 100px;
+    border-bottom: solid;
+}
+
+table tr {
+    height: 50px;
+    border-bottom: solid;
+}
+
+table tr:first{
+    background: #FFFFFF;
+}
+
+table tr:nth-child(odd){
+    background: #D0D0D0;
+}
+table tr:nth-child(even){
+    background: #F0F0F0;
+}
+
+table td {
+    font-size: 12px;
+}
+
+
+/*Elementos pie de página*/
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #D0D0D0;
+    border-top: solid #73EDFF;
+}
+
+footer p {
+    text-align: center;
+}
