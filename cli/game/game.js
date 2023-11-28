@@ -1,5 +1,5 @@
 // Crea el objeto
-function Tamagotchi(vida, estado, hambre, sed){
+function Tamagotchi(vida, estado, hambre, sed) {
     this.vida = vida;
     this.estado = estado;
     this.hambre = hambre;
@@ -16,46 +16,46 @@ var hambre = nyugotchi.hambre;
 var sed = nyugotchi.sed;
 
 // Es una funcion que muestra la informacion por pantalla
-function informacion(){
-        document.getElementById('vida').innerHTML = `Vida: ${vida}`;
-        document.getElementById('estado').innerHTML = `Estado: ${estado[0]}`;
-        document.getElementById('hambre').innerHTML = `Hambre: ${estado[1]} (${hambre})`;
-        document.getElementById('sed').innerHTML = `Sed: ${estado[2]} (${sed})`;
+function informacion() {
+    document.getElementById('vida').innerHTML = `Vida: ${vida}`;
+    document.getElementById('estado').innerHTML = `Estado: ${estado[0]}`;
+    document.getElementById('hambre').innerHTML = `Hambre: ${estado[1]} (${hambre})`;
+    document.getElementById('sed').innerHTML = `Sed: ${estado[2]} (${sed})`;
 
 }
 
 // Suma 2 de hambre y 3 de sed cada 3 segundos
-function estados(){
+function estados() {
     // Si la vida no alcanza el valor máximo de 100, sigue sumando, si no, deja el contador al máximo (100).
-    if (vida < 0){
+    if (vida < 0) {
         vida = 0;
     } else if (vida >= 100) {
         vida = 100;
     }
 
     // Si el hambre no alcanza el valor máximo de 100, sigue sumando, si no, deja el contador al máximo (100).
-    if (hambre < 100){
+    if (hambre < 100) {
         hambre += 2;
     } else if (hambre >= 100) {
         hambre = 100;
     }
 
     // Si la sed no alcanza el valor máximo de 100, sigue sumando, si no, deja el contador al máximo (100).
-    if (sed < 100){
+    if (sed < 100) {
         sed += 3;
-    } else if (sed >= 100){
+    } else if (sed >= 100) {
         sed = 100;
     }
 
     // A medida que baja el hambre, va cambiando el estado
-    if (hambre <= 0){
+    if (hambre <= 0) {
         hambre = 0;
         estado[1] = "Lleno";
-    } else if (hambre < 25){
+    } else if (hambre < 25) {
         estado[1] = "Lleno";
-    } else if (hambre >= 25 && hambre < 50){
+    } else if (hambre >= 25 && hambre < 50) {
         estado[1] = "Poco hambriento.";
-    } else if (hambre >= 50 && hambre < 75)  {
+    } else if (hambre >= 50 && hambre < 75) {
         estado[1] = "Algo hambriento.";
     } else if (hambre >= 75 && hambre < 100) {
         estado[1] = "Muy hambriento.";
@@ -65,14 +65,14 @@ function estados(){
     }
 
     // A medida que baja la sed, va cambiando el estado
-    if (sed <= 0){
+    if (sed <= 0) {
         sed = 0;
         estado[2] = "Lleno";
-    } else if (sed < 25){
+    } else if (sed < 25) {
         estado[2] = "Lleno";
-    } else if (sed >= 25 && sed < 50){
+    } else if (sed >= 25 && sed < 50) {
         estado[2] = "Poco sediento";
-    } else if (sed >= 50 && sed < 75)  {
+    } else if (sed >= 50 && sed < 75) {
         estado[2] = "Algo sediento.";
     } else if (sed >= 75 && sed < 100) {
         estado[2] = "Muy sediento.";
@@ -84,9 +84,9 @@ function estados(){
     // Comienza a restar vida si los valores de hambre o sed llegan a 100, tambien cambia el estado[0] según la vida que falte
     if (hambre == 100 || sed == 100) {
         vida -= 5
-        if (vida <= 75 && vida > 50){
+        if (vida <= 75 && vida > 50) {
             estado[0] = "Enfermo.";
-        } else if (vida <= 50 && vida > 25)  {
+        } else if (vida <= 50 && vida > 25) {
             estado[0] = "Muy enfermo.";
         } else if (vida <= 25) {
             estado[0] = "Muriendose.";
@@ -108,11 +108,11 @@ var repiteEstados = setInterval(estados, 1000); // Ejecuta la funcion estados ca
 var repiteInformacion = setInterval(informacion, 0); // Ejecuta la funcion informacion cada 0 milesimas
 
 // Quita 10 de hambre al pulsar
-function alimentar(){
+function alimentar() {
     if (vida > 0) {
-        if (hambre > 0){
+        if (hambre > 0) {
             hambre -= 10;
-        } else if (hambre < 0){
+        } else if (hambre < 0) {
             hambre = 0;
             hambre -= 0;
             informacion()
@@ -122,11 +122,11 @@ function alimentar(){
 };
 
 // Quita 10 de sed al pulsar
-function darbebida(){
-    if (vida > 0){
-        if (sed > 0){
+function darbebida() {
+    if (vida > 0) {
+        if (sed > 0) {
             sed -= 10;
-        } else if (sed < 0){
+        } else if (sed < 0) {
             sed = 0;
             sed -= 0;
             informacion()
@@ -137,14 +137,14 @@ function darbebida(){
 
 
 // Codigo para el despliegue de botones
-var desplegado = false; 
+var desplegado = false;
 
 // Crea los botones de comida
-function comidas(){
+function comidas() {
     var contenedorBotones = document.getElementById("contenedorComidas");
     contenedorBotones.innerHTML = "";
 
-    if (!desplegado){
+    if (!desplegado) {
         var boton1 = document.createElement("button");
         boton1.innerHTML = "Kebab";
 
@@ -165,23 +165,23 @@ function comidas(){
 }
 
 // Crea los botones de bebida
-function bebidas(){
+function bebidas() {
     var contenedorBotones = document.getElementById("contenedorBebidas");
     contenedorBotones.innerHTML = "";
 
-    if (!desplegado){
-        var boton1 = document.createElement("button");
-        boton1.innerHTML = "Agua";
+    if (!desplegado) {
+        var agua = document.createElement("button");
+        agua.innerHTML = "Agua";
 
-        var boton2 = document.createElement("button");
-        boton2.innerHTML = "Ron cola";
+        var roncola = document.createElement("button");
+        roncola.innerHTML = "Ron cola";
 
-        var boton3 = document.createElement("button");
-        boton3.innerHTML = "Vodka";
+        var vodka = document.createElement("button");
+        vodka.innerHTML = "Vodka";
 
-        contenedorBotones.appendChild(boton1);
-        contenedorBotones.appendChild(boton2);
-        contenedorBotones.appendChild(boton3);
+        contenedorBotones.appendChild(agua);
+        contenedorBotones.appendChild(roncola);
+        contenedorBotones.appendChild(vodka);
 
         desplegado = true;
     } else {
@@ -190,51 +190,90 @@ function bebidas(){
 }
 
 // Crea los botones de juego
-function juegos(){
+function juegos() {
     var contenedorBotones = document.getElementById("contenedorJuegos");
     contenedorBotones.innerHTML = "";
 
-    if (!desplegado){
-        var boton1 = document.createElement("button");
-        boton1.innerHTML = "Ahorcado";
+    if (!desplegado) {
+        var hanged = document.createElement("button");
+        hanged.innerHTML = "Ahorcado";
 
-        var boton2 = document.createElement("button");
-        boton2.innerHTML = "Juego matemático";
-        contenedorBotones.appendChild(boton1);
-        contenedorBotones.appendChild(boton2);
+        var matematico = document.createElement("button");
+        matematico.innerHTML = "Juego matemático";
+        contenedorBotones.appendChild(hanged);
+        contenedorBotones.appendChild(matematico);
 
         desplegado = true;
     } else {
         desplegado = false;
     }
+    hanged.addEventListener("click", ahorcado);
 }
 
 // Creacion del ahorcado
-function ahorcado(){
-    var palabras = [
-        'Hola',
-        'Adios',
-        'Pepe'
-    ]
+function ahorcado() {
+    const palabras = {
+        a: ['amarillo', 'avion', 'animal'],
+        b: ['ballena', 'barco', 'bailar'],
+        c: ['casa', 'cielo', 'comer'],
+        d: ['delfin', 'dibujo', 'deporte'],
+        e: ['elefante', 'escuela', 'escuchar'],
+        f: ['familia', 'fuego', 'flor'],
+        g: ['gato', 'globo', 'guitarra'],
+        h: ['helado', 'hogar', 'huevo'],
+        i: ['iglesia', 'isla', 'iluminar'],
+        j: ['jardin', 'jugar', 'joya'],
+        k: ['kiwi', 'kiosco', 'karate'],
+        l: ['leon', 'luz', 'lago'],
+        m: ['mariposa', 'montana', 'musica'],
+        n: ['nieve', 'nadar', 'nube'],
+        o: ['oso', 'ocean', 'oir'],
+        p: ['perro', 'parque', 'pintar'],
+        q: ['queso', 'quimica', 'quieto'],
+        r: ['rayo', 'rosa', 'reir'],
+        s: ['sol', 'serpiente', 'saltar'],
+        t: ['tigre', 'tren', 'triste'],
+        u: ['unicornio', 'unir', 'ultimo'],
+        v: ['volar', 'verde', 'vino'],
+        w: ['whisky', 'waffle', 'windsurf'],
+        x: ['xilofono', 'xenofobia', 'xenon'],
+        y: ['yoga', 'yogur', 'yunque'],
+        z: ['zapato', 'zigzag', 'zoologico']
+    };
 
-    let longitud = palabras.length;
+    let llaves = Object.keys(palabras);
+    let longitudLlaves = llaves.length;
+    let indiceLlave = Math.floor(Math.random() * longitudLlaves);
+    let llave = llaves[indiceLlave];
+    console.log(llave);
 
-    var indice = Math.floor(Math.random() * longitud);
+    let claves = palabras[llave];
+    let longitudClaves = claves.length;
+    let indiceClave = Math.floor(Math.random() * longitudClaves);
+    let clave = claves[indiceClave];
+    console.log(clave)
 
-    let palabra = palabras[indice].toUpperCase();
+    var intentos = 10;
 
-    let longitudPalabra = palabra.length;
-    console.log(palabra)
-
-    var letra = prompt('Introduce una letra: ').toUpperCase();
-
+    let longitudPalabra = clave.length;
     var solucion = '_'.repeat(longitudPalabra).split("");
-    
-    if (palabra.includes(letra)){
-        
-    }
-    
-    console.log(solucion);
+    console.log(solucion)
 
+    while (intentos > 0) {
+        var letra = prompt('Introduce una letra: ').toUpperCase();
+
+        if (palabra.includes(letra)) {
+            intentos -= 1;
+            indice = palabra.indexOf(letra);
+            solucion[indice] = letra;
+        }
+        console.log(indice)
+        console.log(solucion);
+    }
 
 }
+ahorcado();
+// function juegoMatematico(){
+// boton2.addEventListener("click", juegoMatematico());
+// }
+
