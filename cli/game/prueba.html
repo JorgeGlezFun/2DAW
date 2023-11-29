@@ -4,104 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
+    div {
+      display: inline-block;
     }
+    h1 {
 
-    #tamagotchi {
-      font-family: 'Arial', sans-serif;
-      text-align: center;
     }
+    span {
 
-    button {
-      margin: 10px;
-      padding: 5px 10px;
-      font-size: 16px;
-      cursor: pointer;
     }
   </style>
   <title>Tamagotchi</title>
 </head>
 <body>
-  <div id="tamagotchi">
-    <h1>Tamagotchi</h1>
-    <p id="status">Healthy</p>
-    <p>Age: <span id="age">0</span></p>
-    <p>Hunger: <span id="hunger">0</span></p>
-    <p>Happiness: <span id="happiness">0</span></p>
-    <button onclick="feed()">Feed</button>
-    <button onclick="play()">Play</button>
-    <button onclick="age()">Age</button>
+  <div>
+    <h1>Universidad<span>de</span>Cadiz</h1>
   </div>
-
-  <script>
-    let tamagotchi = {
-      age: 0,
-      hunger: 0,
-      happiness: 0,
-      isAlive: true,
-    };
-
-    function updateDisplay() {
-      document.getElementById('age').innerText = tamagotchi.age;
-      document.getElementById('hunger').innerText = tamagotchi.hunger;
-      document.getElementById('happiness').innerText = tamagotchi.happiness;
-
-      if (tamagotchi.isAlive) {
-        document.getElementById('status').innerText = 'Healthy';
-      } else {
-        document.getElementById('status').innerText = 'Game Over';
-      }
-    }
-
-    function feed() {
-      if (tamagotchi.isAlive) {
-        tamagotchi.hunger -= 5;
-        tamagotchi.happiness += 3;
-        updateDisplay();
-        checkGameOver();
-      }
-    }
-
-    function play() {
-      if (tamagotchi.isAlive) {
-        tamagotchi.hunger += 2;
-        tamagotchi.happiness += 5;
-        updateDisplay();
-        checkGameOver();
-      }
-    }
-
-    function age() {
-      if (tamagotchi.isAlive) {
-        tamagotchi.age += 1;
-        tamagotchi.hunger += 2;
-        tamagotchi.happiness -= 1;
-        updateDisplay();
-        checkGameOver();
-      }
-    }
-
-    function checkGameOver() {
-      if (tamagotchi.hunger >= 10 || tamagotchi.happiness <= -5) {
-        tamagotchi.isAlive = false;
-        updateDisplay();
-      }
-    }
-
-    setInterval(function() {
-      if (tamagotchi.isAlive) {
-        tamagotchi.age += 1;
-        tamagotchi.hunger += 1;
-        tamagotchi.happiness -= 1;
-        updateDisplay();
-        checkGameOver();
-      }
-    }, 1000); // Update every 5 seconds
-  </script>
 </body>
 </html>
