@@ -33,6 +33,7 @@ header nav a {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.5s;
 }
 
 header nav a:hover{
@@ -51,7 +52,7 @@ header nav a:hover{
 
 /* Elemenos cuerpo */
 body {
-    background-image: url('./Fotos-Proyecto/Logo-Fondo/fondo.jpeg');
+    background-image: url('../Fotos-Proyecto/Logo-Fondo/fondo.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -125,7 +126,9 @@ footer li{
 }
 
 footer li a{
+    cursor: pointer;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 footer a:hover{
