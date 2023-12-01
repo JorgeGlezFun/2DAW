@@ -59,13 +59,20 @@ body {
 }
 
 section {
-    position: absolute;
-    width: 1350px;
+    position: relative;
+    width: 1300px;
     height: 280px;
     top: 100px;
     bottom: 75px;
-    left: 480px;
+    left: 440px;
     background: rgba(255,255,255,1);
+}
+
+section img {
+    position: absolute;
+    width: 156px;
+    height: 280px;
+    background-size: cover;
 }
 
 section p {
