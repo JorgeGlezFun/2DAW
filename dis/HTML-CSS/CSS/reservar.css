@@ -50,6 +50,17 @@ header nav a:hover{
     padding: 0;
 }
 
+.activo {
+    background-color: #efb810;
+    color: #000000;
+    height: 65px;
+    padding-top: 5px;
+    border-bottom: 5px solid #000000;
+}
+
+.activo:hover{
+    height: 65px;
+}
 /* Elemenos cuerpo */
 body {
     background-image: url('../Fotos-Proyecto/Logo-Fondo/fondo.jpeg');
@@ -59,7 +70,7 @@ body {
     overflow: hidden;
 }
 
-section {
+div {
     position: absolute;
     width: 920px;
     height: 750px;
@@ -71,7 +82,7 @@ section {
     border-radius: 20px;
 }
 
-section form{
+div form{
     position: relative;
     font-size: 20px;
     color: #FFFFFF;
@@ -79,7 +90,7 @@ section form{
     margin-left: 40px;
 }
 
-section input[type="text"]{
+div input[type="text"]{
     margin-bottom: 50px;
     width: 765px;
     height: 30px;
@@ -93,14 +104,14 @@ section input[type="text"]{
     font-size: 20px;
 }
 
-section input[type="date"] {
+div input[type="date"] {
     margin-bottom: 40px;
     width: 166px;
     height: 30px;
     font-size: 20px;
 }
 
-section input[type="file"] {
+div input[type="file"] {
     margin-bottom: 40px;
     cursor: pointer;
 }
@@ -142,12 +153,12 @@ footer {
     height: 75px;
     left: 0;
     bottom: 0;
+    color: #efb810;
 }
 
 .tituloPDP{
     font-size: 15px;
     font-weight: 100;
-    color: #efb810;
     text-align: left;
 }
 
@@ -155,15 +166,15 @@ footer li{
     display: inline-block;
     font-size: 10px;
     font-weight: 400;
-    color: #efb810;
     display: block;
     text-align: left;
     line-height: 1.2;
 }
 
 footer li a{
-    transition: 0.5s;
+    color: #efb810;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 footer a:hover{
@@ -187,3 +198,4 @@ footer a:hover{
 .siguenos{
     margin-left: 5%;
 }
+

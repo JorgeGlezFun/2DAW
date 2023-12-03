@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Josefin+Slab:ital,wght@0,400;0,700;1,400&display=swap');
 
 * {
-    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
 }
 
 /* Elemenos cabecera */
@@ -23,7 +21,6 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
 }
 
 header nav a {
@@ -39,7 +36,7 @@ header nav a {
     transition: 0.5s;
 }
 
-header nav a:hover{
+header nav a:hover {
     width: 184px;
     height: 75px;
     color: #000000;
@@ -61,9 +58,10 @@ header nav a:hover{
     border-bottom: 5px solid #000000;
 }
 
-.activo:hover{
+.activo:hover {
     height: 65px;
 }
+
 /* Elemenos cuerpo */
 body {
     background-image: url('../Fotos-Proyecto/Logo-Fondo/fondo.jpeg');
@@ -72,54 +70,83 @@ body {
     background-attachment: fixed;
 }
 
-div {
-    position: relative;
-    width: 1300px;
-    height: 280px;
-    top: 100px;
-    bottom: 75px;
-    left: 420px;
-    background: rgba(255,255,255,0.6);
+.carrousel {
+    width: 510px;
+    height: 640px;
+    margin-top: 120px;
+    margin-left: 825px;
+    overflow: hidden;
+}
+
+.carrousel .grande {
+    width: calc(510px * 10);
     display: flex;
-    margin-bottom: 50px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+    transform: translateX(0%);
+}
+
+.carrousel .img {
+    width: 510px;
+    height: 640px;
+    background-size: cover;
+}
+
+.carrousel .puntos {
+    position: absolute;
+    display: flex;
+    background-color: #000000;
+    width: 615px;
+    height: 50px;
+    border-radius: 25px;
+    top: 800px;
+    left: 750px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
     align-items: center;
 }
 
-div img {
-    position: relative;
-    width: 156px;
-    height: 280px;
-    background-size: cover;
-    margin-right: 100px;
+.carrousel .punto {
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 25px;
+    border: 2px solid #efb810;
+    transition: 0.5s;
 }
 
-div p {
-    position: relative;
-    font-family: 'Josefin Slab';
-    font-size: 40px;
-    text-align: center;
-    align-content: center;
+.carrousel .punto:hover {
+    background-color: #efb810;
 }
 
-div a {
+.carrousel .punto.activo {
+    background-color: #efb810;
+}
+
+.boton {
     position: absolute;
     height: 30px;
     width: 125px;
-    margin-top: 15%;
-    margin-left: 85%;
-    color: #efb810;
+    left: 1450px;
+    top: 825px;
     background: #000000;
     border-radius: 12px;
     border: none;
     text-decoration: none;
     text-align: center;
     font-size: 12px;
+    color: #efb810;
     line-height: 30px;
-    cursor: pointer;
     transition: 0.5s;
 }
 
-div a:hover {
+.boton:hover {
     color: #000000;
     background: #efb810;
 }
@@ -127,16 +154,16 @@ div a:hover {
 /* Elemenos pie de pagina */
 footer {
     background: #000000;
+    position: absolute;
     width: 100%;
     display: inline-flex;
     height: 75px;
-    margin-top: 100px;
-    padding: 0;
+    left: 0;
+    bottom: 0;
     color: #efb810;
 }
 
 .tituloPDP{
-    margin-top: 15px;
     font-size: 15px;
     font-weight: 100;
     text-align: left;
@@ -153,14 +180,17 @@ footer li{
 
 footer li a{
     color: #efb810;
-    transition: 0.5s;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 footer a:hover{
     color: #000000;
     background-color: #efb810;
     text-align: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
     text-decoration: none;
 }
 

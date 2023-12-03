@@ -51,6 +51,17 @@ header nav a:hover{
     padding: 0;
 }
 
+.activo {
+    background-color: #efb810;
+    color: #000000;
+    height: 65px;
+    padding-top: 5px;
+    border-bottom: 5px solid #000000;
+}
+
+.activo:hover{
+    height: 65px;
+}
 /* Elemenos cuerpo */
 body {
     background-image: url('../Fotos-Proyecto/Logo-Fondo/fondo.jpeg');
@@ -145,12 +156,12 @@ footer {
     height: 75px;
     left: 0;
     bottom: 0;
+    color: #efb810;
 }
 
 .tituloPDP{
     font-size: 15px;
     font-weight: 100;
-    color: #efb810;
     text-align: left;
 }
 
@@ -158,13 +169,13 @@ footer li{
     display: inline-block;
     font-size: 10px;
     font-weight: 400;
-    color: #efb810;
     display: block;
     text-align: left;
     line-height: 1.2;
 }
 
 footer li a{
+    color: #efb810;
     text-decoration: none;
     transition: 0.5s;
 }

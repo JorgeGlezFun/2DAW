@@ -2,9 +2,8 @@
 
 * {
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
 }
+
 
 /* Elemenos cabecera */
 header {
@@ -23,7 +22,6 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
 }
 
 header nav a {
@@ -70,56 +68,68 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
-div {
-    position: relative;
-    width: 1300px;
-    height: 280px;
-    top: 100px;
-    bottom: 75px;
-    left: 420px;
-    background: rgba(255,255,255,0.6);
-    display: flex;
-    margin-bottom: 50px;
+.evento {
+    position: absolute;
+    height: 700px;
+    top: 75px;
+    left: 0%;
+}
+
+img {
+    width: 520px;
+    height: 930px;
+    object-fit: cover;
+}
+
+
+.informacion {
+    position: absolute;
+    left: 750px;
+    top: 260px;
+    width: 1140px;
+    height: 440px;
+    background: rgba(255,255,255,0.5);
+}
+
+.infoEvento {
+    text-align: justify;
+    margin-left: 35px;
+    margin-right: 20px;
     align-items: center;
+    color: #000000;
 }
 
-div img {
-    position: relative;
-    width: 156px;
-    height: 280px;
-    background-size: cover;
-    margin-right: 100px;
-}
-
-div p {
-    position: relative;
+.infoEvento h1{
     font-family: 'Josefin Slab';
-    font-size: 40px;
-    text-align: center;
-    align-content: center;
+    margin-top: 10%;
+    font-size: 35px;
 }
 
-div a {
+.infoEvento p{
+    font-family: 'Josefin Slab';
+    font-size: 20px;
+}
+
+.boton {
     position: absolute;
     height: 30px;
     width: 125px;
-    margin-top: 15%;
-    margin-left: 85%;
-    color: #efb810;
+    margin-left: 80%;
     background: #000000;
     border-radius: 12px;
     border: none;
     text-decoration: none;
     text-align: center;
     font-size: 12px;
+    color: #efb810;
     line-height: 30px;
-    cursor: pointer;
     transition: 0.5s;
 }
 
-div a:hover {
+.boton:hover {
     color: #000000;
     background: #efb810;
 }
@@ -127,16 +137,16 @@ div a:hover {
 /* Elemenos pie de pagina */
 footer {
     background: #000000;
+    position: absolute;
     width: 100%;
     display: inline-flex;
     height: 75px;
-    margin-top: 100px;
-    padding: 0;
+    left: 0;
+    bottom: 0;
     color: #efb810;
 }
 
 .tituloPDP{
-    margin-top: 15px;
     font-size: 15px;
     font-weight: 100;
     text-align: left;
@@ -153,14 +163,17 @@ footer li{
 
 footer li a{
     color: #efb810;
-    transition: 0.5s;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 footer a:hover{
     color: #000000;
     background-color: #efb810;
     text-align: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
     text-decoration: none;
 }
 
