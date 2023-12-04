@@ -14,6 +14,7 @@ var vida = nyugotchi.vida;
 var estado = nyugotchi.estado;
 var hambre = nyugotchi.hambre;
 var sed = nyugotchi.sed;
+var monedas = 0;
 
 // Es una funcion que muestra la informacion por pantalla
 function informacion() {
@@ -21,7 +22,7 @@ function informacion() {
     document.getElementById('estado').innerHTML = `Estado: ${estado[0]}`;
     document.getElementById('hambre').innerHTML = `Hambre: ${estado[1]} (${hambre})`;
     document.getElementById('sed').innerHTML = `Sed: ${estado[2]} (${sed})`;
-
+    document.getElementById('dinero').innerHTML = `Dinero: ${monedas}€`;
 }
 
 // Suma 2 de hambre y 3 de sed cada 3 segundos
@@ -136,7 +137,7 @@ function darbebida() {
 }
 
 
-// Codigo para el despliegue de botones
+// Variable para el despliegue de botones
 var desplegado = false;
 
 // Crea los botones de comida
@@ -164,6 +165,27 @@ function comidas() {
     }
 }
 
+var AlmacenBebidas = {
+    "agua": 0,
+    "roncola": 0,
+    "vodka": 0,
+
+};
+
+var bebida = "";
+
+function cambiarAgua(){
+    return bebida = "agua";
+}
+
+function cambiarRonCola(){
+    return bebida = "roncola";
+}
+
+function cambiarVodka(){
+    return bebida = "vodka";
+}
+
 // Crea los botones de bebida
 function bebidas() {
     var contenedorBotones = document.getElementById("contenedorBebidas");
@@ -187,6 +209,9 @@ function bebidas() {
     } else {
         desplegado = false;
     }
+    agua.addEventListener("click", cambiarAgua);
+    roncola.addEventListener("click", cambiarRonCola);
+    vodka.addEventListener("click", cambiarVodka);
 }
 
 // Crea los botones de juego
@@ -250,29 +275,45 @@ function ahorcado() {
     let claves = palabras[llave];
     let longitudClaves = claves.length;
     let indiceClave = Math.floor(Math.random() * longitudClaves);
-    let clave = claves[indiceClave];
+    let clave = claves[indiceClave].toUpperCase();
     console.log(clave)
 
     var intentos = 10;
 
     let longitudPalabra = clave.length;
-    var solucion = '_'.repeat(longitudPalabra).split("");
+    var solucion = clave.split("");
+    var solucionVacia = '_'.repeat(longitudPalabra).split("");
+    var letrasUsadas = [];
     console.log(solucion)
 
     while (intentos > 0) {
-        var letra = prompt('Introduce una letra: ').toUpperCase();
 
-        if (palabra.includes(letra)) {
-            intentos -= 1;
-            indice = palabra.indexOf(letra);
-            solucion[indice] = letra;
+        var letra = prompt('Introduce una letra: ');
+        var longitudLetra = letra.length;
+        var tipoLetra = typeof letra;
+        letra = letra.toUpperCase();
+
+        if (tipoLetra != 'string' || letra == '' || letra == null || longitudLetra > 1){
+            alert('No has introducido una letra.');
+        } else if (!letrasUsadas.includes(letra)) {
+            letra.toUpperCase();
+            if (clave.includes(letra)){
+                for (c in solucion) {
+                    if (c == letra) {
+
+                    }
+                }
+            } else {
+                intentos -= 1;
+            }
+        } else {
+            alert(`Ya has usado la letra ${letra}.`)
         }
-        console.log(indice)
-        console.log(solucion);
-    }
 
+        letrasUsadas.push(letra);
+        console.log(indice)
+    }
 }
-ahorcado();
 // function juegoMatematico(){
 // boton2.addEventListener("click", juegoMatematico());
 // }
