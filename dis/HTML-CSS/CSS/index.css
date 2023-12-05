@@ -127,7 +127,6 @@ footer {
 }
 
 footer li{
-    display: inline-block;
     font-size: 10px;
     font-weight: 400;
     display: block;
@@ -148,7 +147,6 @@ footer li a:hover{
     text-align: center;
     align-items: flex-start;
     align-content: flex-start;
-    align-items: flex-start;
     text-decoration: none;
 }
 
