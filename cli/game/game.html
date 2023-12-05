@@ -17,43 +17,44 @@
            <li id="dinero"></li>
         </ul>
     </div>
+    <div id="juegos">
+
+    </div>
     <section class="imagenBotones">
         <img id="foto" src="ñu.jpg">
         <table>
             <tr>
                 <td>
-                    <button onclick="alimentar()">Alimentar</button>
+                    <button onclick="comidas()">Alimentar</button>
                 </td>
                 <td>
-                    <button onclick="comidas()">▼</button>
+                    <button onclick="bebidas()">Dar de beber</button>
+                </td>
+                <td>
+                    <button onclick="juegos()">Jugar</button>
                 </td>
             </tr>
             <tr>
                 <td colspan="2"><div id="contenedorComidas"></div></td>
             </tr>
             <tr>
-                <td>
-                    <button onclick="darbebida()">Dar de beber</button>
-                </td>
-                <td>
-                    <button onclick="bebidas()">▼</button>
-                </td>
-            </tr>
-            <tr>
                 <td colspan="2"><div id="contenedorBebidas"></div></td>
-            </tr>
-            <tr>
-                <td>
-                    <button onclick="jugar()">Jugar</button>
-                </td>
-                <td>
-                    <button onclick="juegos()">▼</button>
-                </td>
             </tr>
             <tr>
                 <td colspan="2"><div id="contenedorJuegos"></div></td>
             </tr>
         </table>
     </section>
+    <div class="imagenBotones">
+        <table>
+            <tr>
+                <td colspan="2"><h2>Tienda</h2></td>
+            </tr>
+            <tr>
+                <td><button onclick="juegos()">Comprar</button></td>
+                <td><button onclick="juegos()">Vender</button></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

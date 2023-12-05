@@ -137,52 +137,73 @@ function darbebida() {
 }
 
 
-// Variable para el despliegue de botones
-var desplegado = false;
+// Variables para el despliegue de botones
+var desplegadoComidas = false;
+var desplegadoBebidas = false;
+var desplegadoJuegos = false;
+
+var comida = "";
+
+function cambiarKebab() {
+    return comida = "kebab";
+}
+
+function cambiarEnsalada() {
+    return comida = "pollo";
+}
+
+function cambiarMacarrones() {
+    return comida = "macarrones";
+}
 
 // Crea los botones de comida
 function comidas() {
     var contenedorBotones = document.getElementById("contenedorComidas");
     contenedorBotones.innerHTML = "";
 
-    if (!desplegado) {
-        var boton1 = document.createElement("button");
-        boton1.innerHTML = "Kebab";
+    if (!desplegadoComidas) {
+        var kebab = document.createElement("button");
+        kebab.innerHTML = "Kebab";
 
-        var boton2 = document.createElement("button");
-        boton2.innerHTML = "Pollo asado";
+        var ensalada = document.createElement("button");
+        ensalada.innerHTML = "Ensalada";
 
-        var boton3 = document.createElement("button");
-        boton3.innerHTML = "Macarrones con tomatico";
+        var macarrones = document.createElement("button");
+        macarrones.innerHTML = "Macarrones con tomatico";
 
-        contenedorBotones.appendChild(boton1);
-        contenedorBotones.appendChild(boton2);
-        contenedorBotones.appendChild(boton3);
+        contenedorBotones.appendChild(kebab);
+        contenedorBotones.appendChild(ensalada);
+        contenedorBotones.appendChild(macarrones);
 
-        desplegado = true;
+        desplegadoComidas = true;
     } else {
-        desplegado = false;
+        desplegadoComidas = false;
     }
+    kebab.addEventListener("click", cambiarKebab);
+    ensalada.addEventListener("click", cambiarEnsalada);
+    macarrones.addEventListener("click", cambiarMacarrones);
 }
 
-var AlmacenBebidas = {
+var Almacen = {
+    "kebab": 0,
+    "pollo": 0,
+    "macarrones": 0,
     "agua": 0,
     "roncola": 0,
     "vodka": 0,
-
 };
 
 var bebida = "";
 
-function cambiarAgua(){
+function cambiarAgua() {
     return bebida = "agua";
 }
 
-function cambiarRonCola(){
+function cambiarRonCola() {
     return bebida = "roncola";
 }
 
-function cambiarVodka(){
+function cambiarVodka() {
     return bebida = "vodka";
 }
 
@@ -191,7 +212,7 @@ function bebidas() {
     var contenedorBotones = document.getElementById("contenedorBebidas");
     contenedorBotones.innerHTML = "";
 
-    if (!desplegado) {
+    if (!desplegadoBebidas) {
         var agua = document.createElement("button");
         agua.innerHTML = "Agua";
 
@@ -205,9 +226,9 @@ function bebidas() {
         contenedorBotones.appendChild(roncola);
         contenedorBotones.appendChild(vodka);
 
-        desplegado = true;
+        desplegadoBebidas = true;
     } else {
-        desplegado = false;
+        desplegadoBebidas = false;
     }
     agua.addEventListener("click", cambiarAgua);
     roncola.addEventListener("click", cambiarRonCola);
@@ -219,7 +240,7 @@ function juegos() {
     var contenedorBotones = document.getElementById("contenedorJuegos");
     contenedorBotones.innerHTML = "";
 
-    if (!desplegado) {
+    if (!desplegadoJuegos) {
         var hanged = document.createElement("button");
         hanged.innerHTML = "Ahorcado";
 
@@ -228,11 +249,12 @@ function juegos() {
         contenedorBotones.appendChild(hanged);
         contenedorBotones.appendChild(matematico);
 
-        desplegado = true;
+        desplegadoJuegos = true;
     } else {
-        desplegado = false;
+        desplegadoJuegos = false;
     }
     hanged.addEventListener("click", ahorcado);
+    matematico.addEventListener("click", juegoMatematico);
 }
 
 // Creacion del ahorcado
@@ -252,7 +274,7 @@ function ahorcado() {
         l: ['leon', 'luz', 'lago'],
         m: ['mariposa', 'montana', 'musica'],
         n: ['nieve', 'nadar', 'nube'],
-        o: ['oso', 'ocean', 'oir'],
+        o: ['oso', 'oceano', 'oir'],
         p: ['perro', 'parque', 'pintar'],
         q: ['queso', 'quimica', 'quieto'],
         r: ['rayo', 'rosa', 'reir'],
@@ -270,37 +292,52 @@ function ahorcado() {
     let longitudLlaves = llaves.length;
     let indiceLlave = Math.floor(Math.random() * longitudLlaves);
     let llave = llaves[indiceLlave];
-    console.log(llave);
 
     let claves = palabras[llave];
     let longitudClaves = claves.length;
     let indiceClave = Math.floor(Math.random() * longitudClaves);
-    let clave = claves[indiceClave].toUpperCase();
-    console.log(clave)
+    let clave = claves[indiceClave].toUpperCase().split("");
 
-    var intentos = 10;
+    let intentos = 10;
 
     let longitudPalabra = clave.length;
-    var solucion = clave.split("");
+    let solucion = clave.join("")
     var solucionVacia = '_'.repeat(longitudPalabra).split("");
     var letrasUsadas = [];
-    console.log(solucion)
+    var respuesta = solucionVacia.join("");
+
+    alert(respuesta);
 
     while (intentos > 0) {
+        if (intentos == 0) {
+            alert(`La palabra era ${solucion}`);
+            break;
+        }
+
+        if (solucion == respuesta) {
+            alert('Has ganado.')
+            monedas += intentos * longitudPalabra;
+            informacion();
+            break;
+        }
 
         var letra = prompt('Introduce una letra: ');
         var longitudLetra = letra.length;
         var tipoLetra = typeof letra;
         letra = letra.toUpperCase();
 
-        if (tipoLetra != 'string' || letra == '' || letra == null || longitudLetra > 1){
+        if (tipoLetra != string || letra == '' || letra == null || longitudLetra > 1) {
             alert('No has introducido una letra.');
-        } else if (!letrasUsadas.includes(letra)) {
+        }
+        alert(respuesta);
+        if (!letrasUsadas.includes(letra)) {
             letra.toUpperCase();
-            if (clave.includes(letra)){
-                for (c in solucion) {
+            if (clave.includes(letra)) {
+                for (c of clave) {
                     if (c == letra) {
-
+                        var indice = clave.indexOf(c);
+                        clave[indice] = '_';
+                        solucionVacia[indice] = letra;
                     }
                 }
             } else {
@@ -309,12 +346,37 @@ function ahorcado() {
         } else {
             alert(`Ya has usado la letra ${letra}.`)
         }
-
         letrasUsadas.push(letra);
-        console.log(indice)
     }
 }
-// function juegoMatematico(){
-// boton2.addEventListener("click", juegoMatematico());
-// }
+
+function juegoMatematico() {
+    let operadorArray = ['+', '-', '*', '/'];
+    let operadorLong = operadorArray.length;
+    let digitos = parseInt(prompt('Introduce el número de digitos máximo que quieres que tengan los numeros: '));
+    let intentos = 10;
+
+    while (intentos > 0) {
+        var numero1 = Math.floor(Math.random() * (10 ** digitos));
+        let operador = operadorArray[Math.floor(Math.random() * operadorLong)];
+        var numero2 = Math.floor(Math.random() * (10 ** digitos));
+        var operacion = eval(`${numero1} ${operador} ${numero2}`);
+
+        if (operador == '/'){
+            operacion = operacion.tofixed(1)
+        }
+        var respuesta = parseInt(prompt(`Cual es el resultado de la operacion: ${numero1} ${operador} ${numero2}`));
+
+        if (operacion == respuesta) {
+            alert('Has acertado.');
+            monedas += intentos * digitos;
+            informacion()
+            break;
+        } else {
+            alert('Has fallado.')
+            alert(`El resultado es: ${operacion}`)
+            intentos -= 1;
+        }
+    }
+}
 
