@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ñugotchi</title>
+        <script src="ñugotchi.js"></script>
+        <link rel="stylesheet" href="ñugotchi.css">
+    </head>
+
+    <body>
+        <div id="estados" class="estado">
+            <ul>
+                <li id="vida"></li>
+                <li id="estado"></li>
+                <li id="hambre"></li>
+                <li id="sed"></li>
+                <li id="dinero"></li>
+            </ul>
+        </div>
+    <div id="GameOver" class="GameOver"></div>
+    <div id="puntuacion" class="puntuacion"></div>
+
+    <img id="foto" src="ñu.png">
+
+    <div id="contenedorAcciones" class="acciones">
+        <h2 id="tituloAcciones">Acciones</h2>
+        <div class="botonesAcciones">
+            <button onclick="comidas()" id="botonA">Alimentar</button>
+            <button onclick="bebidas()" id="botonB">Dar de beber</button>
+            <button onclick="juegos()" id="botonJ">Jugar</button>
+            <div class="accionesDesplegables">
+                <div id="contenedorComidas"></div>
+                <div id="contenedorBebidas"></div>
+                <div id="contenedorJuegos"></div>
+            </div>
+        </div>
+    </div>
+    <div id="contenedorTienda" class="tienda">
+        <h2 id="tituloTienda">Tienda</h2>
+        <div class="botonesTienda">
+            <button onclick="comprar()" id="compra">Comprar</button>
+            <button onclick="vender()" id="venta">Vender</button>
+            <div class="tiendaDesplegables">
+                <div id="contenedorComprar"></div>
+                <div id="contenedorVentas"></div>
+            </div>
+        </div>
+    </div>
+    <div id="contenedorRestart" class="contenedorRestart">
+    </div>
+</body>
+
+</html>
