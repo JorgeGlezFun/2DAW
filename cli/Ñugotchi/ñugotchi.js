@@ -436,7 +436,7 @@ function vender(){
         agua.innerHTML = `Agua: ${Almacen['agua']} (15€)`;
 
         var cola = document.createElement("button");
-        cola.innerHTML = `Cola: ${Almacen['cola']} (3€)`;
+        cola.innerHTML = `Cola: ${Almacen['cola']} (7€)`;
 
         var zumo = document.createElement("button");
         zumo.innerHTML = `Zumo: ${Almacen['zumo']} (8€)`;
@@ -474,8 +474,8 @@ function vender(){
     function venderCola(){
         if (Almacen['cola'] > 0) {
             Almacen['cola'] -= 1;
-            monedas += 3;
-            cola.innerHTML = `Cola: ${Almacen['cola']} (3€)`;
+            monedas += 7;
+            cola.innerHTML = `Cola: ${Almacen['cola']} (7€)`;
             informacion();
         }
     }
