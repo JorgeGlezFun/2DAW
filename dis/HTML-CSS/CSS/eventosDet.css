@@ -49,6 +49,7 @@ header nav a:hover{
     height: 75px;
     margin-left: 25px;
     padding: 0;
+    background-color: #efb810;
 }
 
 .activo {
@@ -84,6 +85,11 @@ img {
     object-fit: cover;
 }
 
+#tips {
+    width: 550px;
+    height: 800px;
+}
+
 
 .informacion {
     position: absolute;
@@ -93,6 +99,7 @@ img {
     height: 440px;
     background: rgba(255,255,255,0.5);
 }
+
 
 .infoEvento {
     text-align: justify;
@@ -111,6 +118,21 @@ img {
 .infoEvento p{
     font-family: 'Josefin Slab';
     font-size: 20px;
+}
+
+#infoVideo {
+    position: absolute;
+    left: 650px;
+    top: 200px;
+    width: 1140px;
+    height: 600px;
+    background: rgba(255,255,255,0.5);
+}
+
+#video h1{
+    font-family: 'Josefin Slab';
+    margin-top: 5%;
+    font-size: 35px;
 }
 
 .boton {
@@ -132,6 +154,10 @@ img {
 .boton:hover {
     color: #000000;
     background: #efb810;
+}
+
+#botonVideo {
+    top: 550px;
 }
 
 /* Elemenos pie de pagina */
