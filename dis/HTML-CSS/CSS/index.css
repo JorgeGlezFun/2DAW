@@ -119,6 +119,14 @@ footer {
     left: 0;
     bottom: 0;
     color: #efb810;
+    align-content: center;
+}
+
+footer img{
+    position: relative;
+    top: 40px;
+    width: 80px;
+    height: 30px;
 }
 
 .tituloPDP{

@@ -85,6 +85,12 @@ img {
     object-fit: cover;
 }
 
+video{
+    width: 520px;
+    height: 930px;
+    object-fit: cover;
+}
+
 #tips {
     width: 550px;
     height: 800px;
