@@ -2,18 +2,30 @@
  * Realizar un script que permita mover una caja dentro de la ventana del navegador tanto con las
  * teclas de desplazamiento del teclado central como con las del teclado numérico.
  */
-document.addEventListener("keydown", tecla =>{
-    accion = tecla.code;
-    posicionX = document.getElementById("cubo").offsetLeft;
-    posicionY = document.getElementById("cubo").offsetTop;
-    switch (accion) {
-        case keyW:
+var cubo = document.getElementById("cubo");
+var posicionX = 0;
+var posicionY = 0;
 
-        case keyA:
-            document.getElementById("cubo").offsetTop - 5;
-        case keyS:
-            document.getElementById("cubo").offsetTop + 5;
-        case keyD:
-            document.getElementById("cubo").offsetLeft + 5;
+document.addEventListener("keydown", tecla => {
+    switch (tecla.key) {
+        case "ArrowUp":
+            posicionY -= 5;
+            cubo.style.top = posicionY + "px";
+            break;
+
+        case "ArrowDown":
+            posicionY += 5;
+            cubo.style.top = posicionY + "px";
+            break;
+
+        case "ArrowLeft":
+            posicionX -= 5;
+            cubo.style.left = posicionX + "px";
+            break;
+
+        case "ArrowRight":
+            posicionX += 5;
+            cubo.style.left = posicionX + "px";
+            break;
     };
 })
