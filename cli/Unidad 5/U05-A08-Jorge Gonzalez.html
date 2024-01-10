@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U05-A08-Jorge Gonzalez</title>
+</head>
+<body>
+    <form action="mailto:jorge.gonzalez.fuentes@iesdonana.org" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name">Introduce tu nombre: </label>
+            <input type="text" name="name" id="name"> <br>
+            <label for="message">Mensaje: </label> <br>
+            <textarea name="message" id="message" cols="50" rows="10"></textarea>
+        </fieldset>
+        <br>
+        <br>
+        <label for="color">Elige un color: </label> <br>
+        <input type="radio" name="color" id="color" value="red"> Rojo <br>
+        <input type="radio" name="color" id="color" value="green"> Verde <br>
+        <input type="radio" name="color" id="color" value="blue"> Azul <br>
+        <br>
+        <label for="asignatura">Selecciona una asignatura: </label>
+        <select name="asignatura" id="asignatura">
+            <option value="Matematicas">Matematicas</option>
+            <option value="Lengua">Lengua</option>
+            <option value="Biologia">Biología</option>
+        </select> <br>
+        <br>
+        <label for="dias">Selecciona los días con disponibilidad: </label> <br>
+        <input type="checkbox" name="Lunes"> Lunes <br>
+        <input type="checkbox" name="Martes"> Martes <br>
+        <input type="checkbox" name="Miercoles"> Miércoles <br>
+        <input type="checkbox" name="Jueves"> Jueves <br>
+        <input type="checkbox" name="Viernes"> Viernes <br>
+        <input type="checkbox" name="Sabado"> Sábado <br>
+        <input type="checkbox" name="Domingo"> Domingo <br>
+        <br>
+        <label for="dia">Selecciona el día preferente: </label>
+        <select name="dia" id="dia">
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miercoles">Miércoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sabado">Sábado</option>
+            <option value="Domingo">Domingo</option>
+        </select> <br>
+        <br>
+        <button type="submit">Haz click para enviar información</button>
+        <button type="reset">Comenzar a rellenar de nuevo</button>
+        <button>Haz click sobre mi</button>
+    </form>
+</body>
+</html>
