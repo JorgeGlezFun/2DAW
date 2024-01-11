@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>U05-A08-Jorge Gonzalez</title>
+    <script src="U05-A09-Jorge Gonzalez.js" async></script>
+    <script src="U05-A11-Jorge Gonzalez.js" async></script>
 </head>
 <body>
-    <form action="mailto:jorge.gonzalez.fuentes@iesdonana.org" method="post" enctype="text/plain">
+    <form id="formulario" action="mailto:ricardo@iesdonana.org" method="post" enctype="text/plain">
         <fieldset>
             <legend>Datos personales</legend>
             <label for="name">Introduce tu nombre: </label>
@@ -17,25 +19,26 @@
         <br>
         <br>
         <label for="color">Elige un color: </label> <br>
-        <input type="radio" name="color" id="color" value="red"> Rojo <br>
-        <input type="radio" name="color" id="color" value="green"> Verde <br>
-        <input type="radio" name="color" id="color" value="blue"> Azul <br>
+        <input type="radio" name="color" id="red" value="red"> Rojo <br>
+        <input type="radio" name="color" id="green" value="green"> Verde <br>
+        <input type="radio" name="color" id="blue" value="blue"> Azul <br>
         <br>
         <label for="asignatura">Selecciona una asignatura: </label>
-        <select name="asignatura" id="asignatura">
+        <select name="asignatura" id="asignatura" onchange="correo_profesor()">
             <option value="Matematicas">Matematicas</option>
             <option value="Lengua">Lengua</option>
             <option value="Biologia">Biología</option>
+            <option value="Tecnologia">Tecnología</option>
         </select> <br>
         <br>
         <label for="dias">Selecciona los días con disponibilidad: </label> <br>
-        <input type="checkbox" name="Lunes"> Lunes <br>
-        <input type="checkbox" name="Martes"> Martes <br>
-        <input type="checkbox" name="Miercoles"> Miércoles <br>
-        <input type="checkbox" name="Jueves"> Jueves <br>
-        <input type="checkbox" name="Viernes"> Viernes <br>
-        <input type="checkbox" name="Sabado"> Sábado <br>
-        <input type="checkbox" name="Domingo"> Domingo <br>
+        <input type="checkbox" values="0" name="Lunes"> Lunes <br>
+        <input type="checkbox" values="1" name="Martes"> Martes <br>
+        <input type="checkbox" values="2" name="Miercoles"> Miércoles <br>
+        <input type="checkbox" values="3" name="Jueves"> Jueves <br>
+        <input type="checkbox" values="4" name="Viernes"> Viernes <br>
+        <input type="checkbox" values="5" name="Sabado"> Sábado <br>
+        <input type="checkbox" values="6" name="Domingo"> Domingo <br>
         <br>
         <label for="dia">Selecciona el día preferente: </label>
         <select name="dia" id="dia">
@@ -50,7 +53,7 @@
         <br>
         <button type="submit">Haz click para enviar información</button>
         <button type="reset">Comenzar a rellenar de nuevo</button>
-        <button>Haz click sobre mi</button>
+        <button type="button" onclick="window.open('https://www.google.es')">Haz click sobre mi</button>
     </form>
 </body>
 </html>
