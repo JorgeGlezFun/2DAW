@@ -37,8 +37,6 @@ header nav a {
 }
 
 header nav a:hover{
-    width: 9.583333333333334vw;
-    height: 7.936507936507937vh;
     color: #000000;
     background-color: #efb810;
 }
@@ -46,7 +44,6 @@ header nav a:hover{
 .logoP {
     height: 7.936507936507937vh;
     margin-left: 2.6455026455026456vh;
-    padding: 0px;
     background-color: #efb810;
 }
 
@@ -57,10 +54,6 @@ header nav a:hover{
     height: 6.878306878306878vh;
     padding-top: 0.5291005291005291vh;
     border-bottom: 0.5291005291005291vh solid #000000;
-}
-
-.activo:hover{
-    height: 6.878306878306878vh;
 }
 /* Elemenos cuerpo */
 body {
@@ -105,26 +98,28 @@ section p{
     height: 61.7989417989418vh;
     margin-top: 10%;
     margin-bottom: 10%;
-    margin-left: 6.560846560846561vh;
+    margin-left: 3%;
 }
 
 /* Elemenos pie de pagina */
 footer {
-    background: #000000;
     position: absolute;
+    background: #000000;
     width: 100%;
-    display: inline-flex;
+    display: flex;
     height: 7.936507936507937vh;
     left: 0;
     bottom: 0;
     color: #efb810;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 footer img{
-    position: relative;
+    position: absolute;
     top: 4.232804232804233vh;
     height: 3.1746031746031744vh;
+    left: 0px;
 }
 
 .tituloPDP{
@@ -151,20 +146,5 @@ footer li a{
 footer li a:hover{
     color: #000000;
     background-color: #efb810;
-    text-align: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    text-decoration: none;
 }
 
-.contactanos{
-    margin-left: 30%;
-}
-
-.horario{
-    margin-left: 5%;
-}
-
-.siguenos{
-    margin-left: 5%;
-}
