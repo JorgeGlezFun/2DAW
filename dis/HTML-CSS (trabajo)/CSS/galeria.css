@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Josefin+Slab:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+/* Elemenos cabecera */
+header {
+    background: #000000;
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    left: 0px;
+    top: 0px;
+}
+
+header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav a {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    width: 184px;
+    height: 75px;
+    color: #efb810;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+header nav a:hover{
+    width: 184px;
+    height: 75px;
+    color: #000000;
+    background-color: #efb810;
+}
+
+.logoP {
+    filter: brightness(1);
+    width: 75px;
+    height: 75px;
+    margin-left: 25px;
+    padding: 0;
+    background-color: #efb810;
+}
+
+.activo {
+    background-color: #efb810;
+    color: #000000;
+    height: 65px;
+    padding-top: 5px;
+    border-bottom: 5px solid #000000;
+}
+
+.activo:hover{
+    height: 65px;
+}
+/* Elemenos cuerpo */
+body {
+    overflow: hidden;
+}
+
+section {
+    position: absolute;
+    width: 640px;
+    height: 800px;
+    top: 75px;
+    display: inline-block;
+}
+
+img {
+    filter: brightness(0.6);
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+img:hover{
+    filter: brightness(1);
+}
+
+div h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150px);
+    font-size: 40px;
+    font-weight: 100;
+    text-decoration-line: underline;
+    color: white;
+}
+
+.normales {
+    left: 0%;
+}
+
+.pequetatus {
+    left: 640px;
+}
+
+.covers {
+    left: 1280px;
+}
+
+/* Elemenos pie de pagina */
+footer {
+    background: #000000;
+    position: absolute;
+    width: 100%;
+    display: inline-flex;
+    height: 75px;
+    left: 0;
+    bottom: 0;
+    color: #efb810;
+}
+
+.tituloPDP{
+    font-size: 15px;
+    font-weight: 100;
+    text-align: left;
+}
+
+footer li{
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    line-height: 1.2;
+}
+
+footer li a{
+    color: #efb810;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+footer a:hover{
+    color: #000000;
+    background-color: #efb810;
+    text-align: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    text-decoration: none;
+}
+
+.contactanos{
+    margin-left: 30%;
+}
+
+.horario{
+    margin-left: 5%;
+}
+
+.siguenos{
+    margin-left: 5%;
+}

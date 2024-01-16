@@ -1,0 +1,88 @@
+:root {
+    --separa: 4px;
+}
+
+.item {
+    padding: var(--separa);
+    width: 180px;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.4;
+    outline: 3px solid #fff;
+}
+
+.item img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+}
+
+.modal:target {
+    display: block;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.imagen {
+    margin: auto;
+    width: 30%;
+    max-width: 50%;
+    display: flex;
+}
+
+@keyframes zoom {
+    0% {
+        opacity: 0.2;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.imagen a {
+    margin: 0 4px;
+}
+
+.imagen img {
+    max-width: 100%;
+    width: 80vw;
+    height: auto;
+    border: 8px solid #fff;
+    animation: zoom 0.5s ease-in-out;
+    position: relative;
+}
+
+.imagen #cerrar {
+    text-align: center;
+    padding: 8px;
+    margin: 0;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 100%;
+    color: #efb810;
+    background-color: #000000;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.imagen #cerrar:hover {
+    color: #000000;
+    background-color: #efb810;
+}

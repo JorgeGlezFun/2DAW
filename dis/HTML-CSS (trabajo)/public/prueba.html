@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Galería lightbox responsive solo con CSS">
+    <meta name="author" content="(cc) 3con14" />
+    <title>Galería</title>
+    <link rel="stylesheet" href="./prueba.css">
+</head>
+<body>
+<main>
+  <h3>Galería de imágenes lightbox <br>responsive solo con CSS</h3>
+
+  <div class="galeria">
+    <div class="item"><a href="#img1"><img src="../Fotos-Proyecto/Carteles-eventos/Cartel-bodas.jpg"></a></div>
+    <div class="item"><a href="#img2"><img src="../Fotos-Proyecto/Carteles-eventos/Cartel-esteban.jpeg"></a></div>
+    <div class="item"><a href="#img3"><img src="../Fotos-Proyecto/Carteles-eventos/Cartel-halloween.jpeg"></a></div>
+    <div class="item"><a href="#img4"><img src="../Fotos-Proyecto/Carteles-eventos/Cartel-jerez.jpg"></a></div>
+  </div>
+
+  <div class="modal" id="img1">
+    <div class="imagen">
+      <a class="ant" href="#img4"></a>
+      <a href="#" title="cerrar"></a><img src="../Fotos-Proyecto/Carteles-eventos/Cartel-bodas.jpg">
+      <a class="sig" href="#img2"></a>
+    </div>
+  </div>
+
+  <div class="modal" id="img2">
+    <div class="imagen">
+      <a class="ant" href="#img1"></a>
+      <a href="#" title="cerrar"></a><img src="../Fotos-Proyecto/Carteles-eventos/Cartel-esteban.jpeg">
+      <a class="sig" href="#img3"></a>
+    </div>
+  </div>
+
+  <div class="modal" id="img3">
+    <div class="imagen">
+      <a class="ant" href="#img2"></a>
+      <a href="#" title="cerrar"></a><img src="../Fotos-Proyecto/Carteles-eventos/Cartel-halloween.jpeg">
+      <a class="sig" href="#img4"></a>
+    </div>
+  </div>
+
+  <div class="modal" id="img4">
+    <div class="imagen">
+      <a class="ant" href="#img3"></a>
+      <a href="#" title="cerrar"></a><img src="../Fotos-Proyecto/Carteles-eventos/Cartel-jerez.jpg">
+      <a class="sig" href="#img1"></a>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>
