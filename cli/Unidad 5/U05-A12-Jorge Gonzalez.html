@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="U05-A12-Jorge Gonzalez.js"></script>
+    <title>U05-A11-Jorge Gonzalez</title>
+</head>
+<body>
+    <form id="formulario" method="post">
+        <label for="dni">DNI: </label>
+        <input type="text" name="dni" id="dni" onblur="validaDNI()">
+        <br>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" onblur="validaNombre()">
+        <br>
+        <label for="fecha_nacimiento">F. Nac.: </label>
+        <input type="text" name="fecha_nacimiento" id="fecha_nacimiento" onblur="validaNacimiento()">
+        <br>
+        <label for="email">E-mail: </label>
+        <input type="text" name="email" id="email" onblur="validaEmail()">
+        <br>
+        <label for="pagina_web">Pág. Web: </label>
+        <input type="text" name="pagina_web" id="pagina_web" onblur="validaWeb()">
+        <br>
+        <label for="contraseña">Contraseña: </label>
+        <input type="password" name="contraseña" id="contraseña" pattern="" onblur="validaContrasena()">
+        <br>
+        <label for="confirmar_contraseña">Confirmar contraseña: </label>
+        <input type="password" name="confirmar_contraseña" id="confirmar_contraseña" pattern="/^.{8,10}$/">
+        <br>
+        <button type="submit">GUARDAR</button>
+        <button>VER</button>
+    </form>
+</body>
+</html>
