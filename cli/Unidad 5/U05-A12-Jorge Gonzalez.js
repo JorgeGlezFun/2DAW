@@ -1,51 +1,50 @@
-function validar() {
-
-}
-
 function validaDNI() {
-    dni = document.getElementById("dni");
-    patron = new RegExp('/^\d{2}\.\d{3}\.\d{3}\-[A-Z]{1}$/');
-    if(!patron.test(dni.value)) {
-        dni.value = ""
-        alert("El DNI introducido no es válido.");
+    var dni = document.getElementById("dni");
+    if(!dni.checkValidity()) {
+        dni.value = "";
     }
 }
 
 function validaNombre() {
-
+    nombre = document.getElementById("nombre");
+    if (!nombre.checkValidity()) {
+        nombre.value = "";
+    }
 }
 
 function validaNacimiento() {
-    f_nacimiento = documento.getElementById("fecha_nacimiento");
-    patron = new RegExp('/([0-2]{1}[0-9]{1}|3{1}[0-1]{1})\/(0[0-9]{1}|1{1}[0-2]{1})\/[0-9]{4}$/');
-    if (!patron.test(f_nacimiento.value)){
-        alert("La fecha introducida no es válida.");
+    f_nacimiento = document.getElementById("fecha_nacimiento");
+    if (!f_nacimiento.checkValidity()) {
+        f_nacimiento.value = "";
     }
 }
 
 function validaEmail() {
-    email = document.getElementById("email").value;
-    patron = new RegExp('/^.{4,40}\@\w{4,10}\.\w{2,3}$/');
-    if (!patron.test(email.value)){
-        email = ""
-        alert("El E-mail introducido no es válido.");
+    email = document.getElementById("email");
+    if (!email.checkValidity()) {
+        email.value = "";
     }
 }
 
 function validaWeb() {
-    web = document.getElementById("pagina_web").value;
-    patron = new RegExp('/^http:\/\/w{3}\..{1,40}\.\w{2,3}$/');
-    if (!patron.test(web.value)){
-        alert("La web introducida no es válida");
+    web = document.getElementById("pagina_web");
+    if (!web.checkValidity()) {
+        web = "";
     }
 }
 
 function validaContrasena() {
+    contraseña = document.getElementById("contraseña");
+    if (!contraseña.checkValidity()) {
+        contraseña = "";
+    }
+}
+
+function confirma_contrasenas() {
     contraseña = document.getElementById("contraseña").value;
     confirmacion = document.getElementById("confirmar_contraseña").value;
-    patron = new RegExp('/^.{8,10}$/');
-    if (!patron.test(contraseña.value)){
-
+    if (confirmacion != contraseña) {
+        confirmacion.setCustomValidity("La contraseña no coindice.");
+        confirmacion.reportValidity();
     }
-
 }
