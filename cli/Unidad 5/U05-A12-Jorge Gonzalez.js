@@ -1,50 +1,51 @@
-function validaDNI() {
+document.addEventListener("DOMContentLoaded", function() {
     var dni = document.getElementById("dni");
-    if(!dni.checkValidity()) {
-        dni.value = "";
-    }
-}
+    dni.addEventListener("blur", () => {
+        if (!dni.checkValidity()) {
+            dni.value = "";
+        }
+    });
 
-function validaNombre() {
-    nombre = document.getElementById("nombre");
-    if (!nombre.checkValidity()) {
-        nombre.value = "";
-    }
-}
+    var nombre = document.getElementById("nombre");
+    nombre.addEventListener("blur", () => {
+        if (!nombre.checkValidity()) {
+            nombre.value = "";
+        }
+    })
 
-function validaNacimiento() {
-    f_nacimiento = document.getElementById("fecha_nacimiento");
-    if (!f_nacimiento.checkValidity()) {
-        f_nacimiento.value = "";
-    }
-}
+    var f_nacimiento = document.getElementById("fecha_nacimiento");
+    f_nacimiento.addEventListener("blur", () => {
+        if (!f_nacimiento.checkValidity()) {
+            f_nacimiento.value = "";
+        }
+    })
 
-function validaEmail() {
-    email = document.getElementById("email");
-    if (!email.checkValidity()) {
-        email.value = "";
-    }
-}
+    var email = document.getElementById("email");
+    email.addEventListener("blur", () => {
+        if (!email.checkValidity()) {
+            email.value = "";
+        }
+    })
 
-function validaWeb() {
-    web = document.getElementById("pagina_web");
-    if (!web.checkValidity()) {
-        web = "";
-    }
-}
+    var web = document.getElementById("pagina_web");
+    web.addEventListener("blur", () => {
+        if (!web.checkValidity()) {
+            web.value = "";
+        }
+    })
 
-function validaContrasena() {
-    contraseña = document.getElementById("contraseña");
-    if (!contraseña.checkValidity()) {
-        contraseña = "";
-    }
-}
+    var contraseña = document.getElementById("contraseña");
+    contraseña.addEventListener("blur", () => {
+        if (!contraseña.checkValidity()) {
+            contraseña.value = "";
+        }
+    })
 
-function confirma_contrasenas() {
-    contraseña = document.getElementById("contraseña").value;
-    confirmacion = document.getElementById("confirmar_contraseña").value;
-    if (confirmacion != contraseña) {
-        confirmacion.setCustomValidity("La contraseña no coindice.");
-        confirmacion.reportValidity();
-    }
-}
+    var confirmacion = document.getElementById("confirmar_contraseña");
+    confirmacion.addEventListener("blur", () => {
+        if (confirmacion.value != contraseña.value) {
+            confirmacion.setCustomValidity("La contraseña no coindice.");
+            confirmacion.reportValidity();
+        }
+    })
+});
