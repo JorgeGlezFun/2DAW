@@ -12,7 +12,7 @@
         <input type="text" name="dni" id="dni" pattern="\d{2}\.\d{3}\.\d{3}-[A-Z]{1}">
         <br>
         <label for="nombre">Nombre: </label>
-        <input type="text" name="nombre" id="nombre" pattern="[a-zA-Z]{3,10}(\s?[a-zA-Z]{0,10}\s?[a-zA-Z]{0,10}\s?[a-zA-Z]{0,10})?">
+        <input type="text" name="nombre" id="nombre" pattern="^(\w{1,10})?\s(\w{1,10})?(\s?(\w{1,10})?\s?(\w{1,10})?)$">
         <br>
         <label for="fecha_nacimiento">F. Nac.: </label>
         <input type="text" name="fecha_nacimiento" id="fecha_nacimiento" pattern="([0-2]{1}[0-9]{1}|3{1}[0-1]{1})\/(0[0-9]{1}|1{1}[0-2]{1})\/[0-9]{4}$">
@@ -27,7 +27,7 @@
         <input type="password" name="contraseña" id="contraseña" pattern="^.{8,10}">
         <br>
         <label for="confirmar_contraseña">Confirmar contraseña: </label>
-        <input type="password" name="confirmar_contraseña" id="confirmar_contraseña"">
+        <input type="password" name="confirmar_contraseña" id="confirmar_contraseña">
         <br>
         <button type="submit">GUARDAR</button>
         <button>VER</button>
