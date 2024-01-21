@@ -7,6 +7,7 @@
     <title>Reserva tu cita con ArtTattooPMG</title>
     <link rel="stylesheet" href="../CSS/reservar.css">
     <link rel="icon" type="image/jpg" href="../Fotos-Proyecto/Logo-Fondo/Logo-p.png">
+    <script src="../scripts/acordeon.js" async></script>
 </head>
 <body>
     <header>
@@ -16,28 +17,74 @@
             <a href="./sobre_nosotros.html">Sobre nosotros</a>
             <a href="./galeria.html">Galeria</a>
             <a href="./eventos.html">Eventos</a>
-            <a href="./reservar.html" class="activo">Reserva tu cita</a>
+            <a href="./reservar.html" class="active">Reserva tu cita</a>
         </nav>
     </header>
     <main>
         <audio src="../audios/sfx-office-post-it2.mp3" autoplay></audio>
-        <div>
-            <form>
-                <label for="nombre">Nombre:*</label><br>
-                <input type="text"  name="nombre" id="nombre"><br>
-                <label for="apellidos">Apellidos:*</label><br>
-                <input type="text"  name="apellidos" id="apellidos"><br>
-                <label for="telefono">Teléfono:*</label><br>
-                <input type="text" name="telefono" id="telefono"><br>
-                <label for="disenyo">Inserte imagen del diseño que te quieres realizar:*</label><br>
-                <input type="file"  name="disenyo" id="disenyo"><br>
-                <label for="tamanyo">Especifique el tamaño del tatuaje en centimetros (cm):*</label>
-                <input type="text" name="tamanyo" id="tamanyo">
-                <br>
-                <label for="fecha">Selecciona la fecha:*</label>
-                <input type="date" name="fecha" id="fecha"> <br>
-                <button type="submit">Enviar</button>
-            </form>
+        <div class="acordeon">
+            <div class="bloque" id="registro">
+                <h2 class="h2">Registro</h2>
+                <div class="contenido">
+                    <form>
+                        <label for="nombre">Nombre:*</label><br>
+                        <input type="text"  name="nombre" id="nombre"><br>
+                        <label for="apellidos">Apellidos:*</label><br>
+                        <input type="text"  name="apellidos" id="apellidos"><br>
+                        <label for="telefono">Teléfono:*</label><br>
+                        <input type="text" name="telefono" id="telefono"><br>
+                        <label for="fecha">Selecciona la fecha:*</label>
+                        <input type="date" name="fecha" id="fecha"> <br>
+                    </form>
+                </div>
+            </div>
+            <div class="bloque" id="tatuaje">
+                <h2 class="h2">Datos del tatuaje</h2>
+                <div class="contenido">
+                    <form>
+                        <label for="disenyo_tatu">Inserte una imagen del diseño que te quieres realizar:*</label><br>
+                        <input type="file"  name="disenyo_tatu" id="disenyo_tatu"><br>
+                        <label for="tamanyo">Especifique el tamaño del tatuaje en centimetros (cm):*</label>
+                        <input type="text" name="tamanyo" id="tamanyo">
+                        <br>
+                    </form>
+                </div>
+            </div>
+            <div class="bloque" id="piercing">
+                <h2 class="h2">Datos del piercing</h2>
+                <div class="contenido">
+                    <form>
+                        <label for="disenyo">Selecciona el tipo de piercing que quieres realizarte:*</label>
+                        <select name="zona" id="zona">
+                            <optgroup label="Oreja">
+                                <option value="lobulo">Lobulo</option>
+                                <option value="lobulo_superior">Lobulo superior</option>
+                                <option value="helix">Hélix</option>
+                                <option value="contrahelix">Contra-Hélix</option>
+                                <option value="rook">Rook</option>
+                                <option value="daith">Daith</option>
+                                <option value="tragus">Tragus</option>
+                                <option value="antitragus">Antitragus</option>
+                                <option value="flat">Flat</option>
+                                <option value="conch">Conch</option>
+                            </optgroup>
+                            <optgroup label="Nariz">
+                                <option value="nostril">High nostril</option>
+                                <option value="nostril">Nostril</option>
+                                <option value="septum">Septum</option>
+                                <option value="thirdeye">Third Eye</option>
+                                <option value="nasallang">Nasallang</option>
+                                <option value="bridge">Bridge</option>
+                                <option value="rhino">Rhino</option>
+                                <option value="septril">Septril</option>
+                                <option value="austinbar">Austin bar</option>
+                            </optgroup>
+                        </select>
+                        <br>
+                    </form>
+                </div>
+            </div>
+            <button type="submit">Enviar</button>
         </div>
     </main>
     <footer>

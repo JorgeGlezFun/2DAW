@@ -2,8 +2,6 @@
 
 * {
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 /* Elemenos cabecera */
@@ -23,7 +21,6 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
 }
 
 header nav a {
@@ -65,139 +62,154 @@ header nav a:hover{
 .activo:hover{
     height: 65px;
 }
-/* Elemenos cuerpo */
+
 body {
     background-image: url('../Fotos-Proyecto/Logo-Fondo/fondo.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
-div {
-    position: relative;
-    width: 1300px;
-    height: 280px;
+/* Elementos tabs */
+.contenedor{
+    position: absolute;
     top: 100px;
-    bottom: 75px;
-    left: 320px;
-    background: rgba(255,255,255,0.6);
+    width: 90%;
+    max-width: 120em;
+    height: 700px;
+}
+
+.contenedor .ul{
     display: flex;
-    margin-bottom: 50px;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+}
+
+.contenedor .li{
+    position: relative;
+    left: 0;
+    background-color: #efb810;
+    color: #000000;
+    padding: 1em;
+    margin:0 0.05em 0 0;
+    transition: all .5s ease;
+    cursor: pointer;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.contenedor .li.active{
+    background-color: #000000;
+    color: #efb810;
+}
+
+.contenedor .subcontenedor{
+    min-height: 10vh;
+    position: relative;
+    top: 0;
+    left: 25px;
+}
+
+.contenedor .bloque{
+    background-color: green;
+    margin:1em;
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+.contenedor .bloque.active{
+    position: relative;
+    opacity: 1;
+    transform: translateY(0%);
+    width: 95.6%;
+    top: -16px;
+    height: 580px;
+    background-color: #000000;
+    justify-content: center;
     align-items: center;
 }
 
-div img {
-    position: relative;
-    width: 156px;
-    height: 280px;
-    background-size: cover;
-    margin-right: 100px;
-}
-
-div p {
-    position: relative;
-    font-family: 'Josefin Slab';
-    font-size: 40px;
-    text-align: center;
+.infoEvento {
+    text-align: justify;
+    justify-content: center;
     align-content: center;
-}
-
-div a {
-    position: absolute;
-    height: 30px;
-    width: 125px;
-    margin-top: 15%;
-    margin-left: 85%;
     color: #efb810;
-    background: #000000;
-    border-radius: 12px;
-    border: none;
-    text-decoration: none;
-    text-align: center;
-    font-size: 12px;
-    line-height: 30px;
-    cursor: pointer;
-    transition: 0.5s;
+    margin-left: 30%;
 }
 
-div a:hover {
-    color: #000000;
-    background: #efb810;
+.infoEvento h1{
+    font-family: 'Josefin Slab';
+    margin-top: 10%;
+    font-size: 35px;
 }
 
-.paginacion {
+#video {
     position: absolute;
-    top: 147%;
-    left: 44%;
-    display: flex;
-    padding: 0;
-    margin: 0;
+    top: -30px;
 }
 
-#dos{
-    top: 112%;
+.infoEvento p{
+    font-family: 'Josefin Slab';
+    font-size: 20px;
 }
 
-.paginacion li {
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    width: 50px;
-    margin-left: 5px;
+.contenedor .bloque.active video {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
 }
 
-.paginacion li a {
-    color: #efb810;
-    border: 1px solid #efb810;
-    background-color: #000000;
-    border-radius: 5px;
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    transition: 0.5s;
+.contenedor .bloque.active img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
 }
-
-.paginacion li a:hover {
-    color: #000000;
-    background-color: #efb810;
-}
-
 /* Elemenos pie de pagina */
 footer {
     background: #000000;
+    position: absolute;
     width: 100%;
     display: inline-flex;
     height: 75px;
-    margin-top: 100px;
-    padding: 0;
+    left: 0;
+    bottom: 0;
     color: #efb810;
 }
 
 .tituloPDP{
-    margin-top: 15px;
     font-size: 15px;
     font-weight: 100;
     text-align: left;
 }
 
 footer li{
-    display: block;
+    display: inline-block;
     font-size: 10px;
     font-weight: 400;
+    display: block;
     text-align: left;
     line-height: 1.2;
 }
 
 footer li a{
-    transition: 0.5s;
     color: #efb810;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 footer a:hover{
     color: #000000;
     background-color: #efb810;
     text-align: center;
+    align-items: flex-start;
+    align-content: flex-start;
     text-decoration: none;
 }
 
