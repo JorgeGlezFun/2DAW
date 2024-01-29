@@ -76,7 +76,7 @@ button {
     position: absolute;
     height: 30px;
     width: 125px;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 75%;
     background: #efb810;
     border-radius: 12px;
@@ -104,7 +104,7 @@ button:active {
     position: absolute;
     top: 75px;
     width: 920px;
-    left: 560px;
+    left: 460px;
     padding:2rem;
     color: #efb810;
 }
