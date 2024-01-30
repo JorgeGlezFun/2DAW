@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-a8-Jorge Gonzalez</title>
+    <script src="ex-a8-Jorge_Gonzalez.js" async></script>
+</head>
+<body>
+    <form action="mailto:Rafael.figueroa@iesdonana.org" method="post" id="formulario">
+        <fieldset>
+            <legend>DATOS PERSONALES DE ACCESO</legend>
+            <label for="nombre"></label>
+            <input placeholder="Nombre" type="text" name="nombre" id="nombre" pattern="^([A-Z][a-z]{1,10})\s?([A-Z]?[a-z]{1,10})?(\s?([A-Z]?[a-z]{1,10})?\s?([A-Z]?[a-z]{1,10})?)$" required>
+            <br>
+            <label for="apellido"></label>
+            <input placeholder="Apellido" type="text" name="apellido" id="apellido" pattern="^([A-Z][a-z]{1,10})\s?([A-Z]?[a-z]{1,10})?(\s?([A-Z]?[a-z]{1,10})?\s?([A-Z]?[a-z]{1,10})?)$" required>
+            <br>
+            <label for="edad"></label>
+            <input placeholder="Edad" type="text" name="edad" id="edad" pattern="^[0-9]|[1-9][0-9]|1[0-1][0-9]|120$" required>
+            <br>
+            <label for="dni"></label>
+            <input placeholder="DNI 99.999.999-X" type="password" name="dni" id="dni" pattern="\d{2}\.\d{3}\.\d{3}-[A-Z]{1}">
+            <br>
+            <label for="sexo">Sexo:</label>
+            <select name="sexo" id="sexo" required>
+                <option value="mas">Masculino</option>
+                <option value="fem">Femenino</option>
+            </select>
+            <br>
+            <label for="lugar_nacimiento">Lugar de Nacimiento</label>
+            <input placeholder="" type="text" name="lugar_nacimiento" id="lugar_nacimiento" pattern="^([A-Z][a-z]{1,10})\s?([A-Z]?[a-z]{1,10})?$" required>
+        </fieldset>
+        <br>
+        <div>
+        <button type="submit" id="guardar">GUARDAR</button>
+    <button type="button" id="ver">VER</button>
+    </div>
+</body>
+</html>
