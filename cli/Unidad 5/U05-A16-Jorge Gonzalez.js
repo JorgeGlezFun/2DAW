@@ -5,7 +5,7 @@ function setCookie(nombreCookie, valorCookie){
 function getCookie(nombreCookie){
     var cookie = document.cookie.split(' ');
     if (cookie) {
-        return 0;
+        return false;
     } else {
         var longitudCookie = cookie.length;
         var nombres = [];
