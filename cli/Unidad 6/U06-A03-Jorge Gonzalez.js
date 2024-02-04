@@ -1,3 +1,4 @@
+
 // Crear objeto Vehículo.
 // a) Crear constructor con las siguientes propiedades: marca, modelo, color y año fabricación
 // b) Introducir 5 vehículos diferente.
@@ -12,32 +13,50 @@ function Vehiculo(marca, modelo, color, anyo){
 };
 
 // b)
-var coches = {
-    "coche1": new Vehiculo('Hyundai', 'i30', 'Blanco', '2008'),
-    "coche2": new Vehiculo('Audi', 'R8', 'Rojo', '2017'),
-    "coche3": new Vehiculo('Volkswagen', 'Passat', 'Negro', '2020'),
-    "coche4": new Vehiculo('Chevrolet', 'Epica', 'Champagne', '2008'),
-    "coche5": new Vehiculo('Mercedes', 'AMG', 'Plata', '2024')
-}
+var coches = [
+    new Vehiculo('Hyundai', 'i30', 'Blanco', '2008'),
+    new Vehiculo('Audi', 'R8', 'Rojo', '2017'),
+    new Vehiculo('Volkswagen', 'Passat', 'Negro', '2020'),
+    new Vehiculo('Chevrolet', 'Epica', 'Champagne', '2008'),
+    new Vehiculo('Mercedes', 'AMG', 'Plata', '2024')
+];
 
-var longitud = coches.length;
-const valoresObjeto = ['marca',]
 // c)
 var tabla = document.createElement('table');
-var cuerpoTabla = document.createElement('tbody');
-var columna = document.createElement('td');
-  // Crea las celdas
-for (var i = 0; i < longitud; i++) {
-// Crea las hileras de la tabla
-    var fila = document.createElement("tr");
-    var columna = document.createElement("td");
-    var textoColumna = document.createTextNode(
-        coches['coche' + i].marca
-        );
-    columna.appendChild(textoColumna);
-    fila.appendChild(columna);
-    cuerpoTabla.appendChild(fila);
+tabla.setAttribute('border', '2');
+var longitud = coches.length;
+
+const nombres = ['Marca', 'Modelo', 'Color', 'Año'];
+var longitudNombres = nombres.length;
+var filaGrande = document.createElement('tr');
+
+for (var n = 0; n < longitudNombres; n++){
+    var columnaGrande = document.createElement('th');
+    var textoFilaGrande = document.createTextNode(nombres[n]);
+    columnaGrande.appendChild(textoFilaGrande);
+    filaGrande.appendChild(columnaGrande);
+    tabla.appendChild(filaGrande);
 }
-tabla.appendChild(cuerpoTabla);
-document.appendChild(tabla);
-tabla.setAttribute("border", "2");
+
+for (var c = 0; c < longitud; c++) {
+    var fila = document.createElement('tr');
+    var columnaMarca = document.createElement('td');
+    var columnaModelo = document.createElement('td');
+    var columnaColor = document.createElement('td');
+    var columnaAnyo = document.createElement('td');
+    var textoColumnaMarca = document.createTextNode(coches[c].marca);
+    var textoColumnaModelo = document.createTextNode(coches[c].modelo);
+    var textoColumnaColor = document.createTextNode(coches[c].color);
+    var textoColumnaAnyo = document.createTextNode(coches[c].anyo);
+    columnaMarca.appendChild(textoColumnaMarca);
+    columnaModelo.appendChild(textoColumnaModelo);
+    columnaColor.appendChild(textoColumnaColor);
+    columnaAnyo.appendChild(textoColumnaAnyo);
+    fila.appendChild(columnaMarca);
+    fila.appendChild(columnaModelo);
+    fila.appendChild(columnaColor);
+    fila.appendChild(columnaAnyo);
+    tabla.appendChild(fila);
+}
+
+document.body.appendChild(tabla);
