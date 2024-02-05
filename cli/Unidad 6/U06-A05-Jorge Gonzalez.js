@@ -2,21 +2,19 @@
 Crear un botón para ocultar/visualizar el párrafo elegido.
 Para ello puedes utilizar dos clases en CSS y, mediante JavaScript, se irá
 cambiando la clase al elemento del DOM */
-var parrafos = document.getElementById('parrafos').value;
-var parrafo1 = document.getElementById('parrafo1');
-var parrafo2 = document.getElementById('parrafo1');
-var parrafo3 = document.getElementById('parrafo1');
+var parrafos = document.getElementById('parrafos');
 var boton = document.getElementById('boton');
 var booleano = false;
 
-function escondite(parrafo){
+boton.addEventListener('click', ()=>{
+    var parrafo = parrafos.value;
+    var parrafo1 = document.getElementById(parrafo);
+    console.log(parrafo);
     if (booleano) {
-        parrafo.className = 'escondido';
+        parrafo1.className = 'escondido';
         booleano = false;
     } else {
-        parrafo.className = '';
+        parrafo1.className = '';
         booleano = true;
     }
-}
-
-boton.addEventListener('click', escondite(parrafos));
+});
