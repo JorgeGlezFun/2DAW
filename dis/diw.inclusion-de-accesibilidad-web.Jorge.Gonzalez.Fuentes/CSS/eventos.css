@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Josefin+Slab:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
+}
+
+/*Elementos cabecera*/
+header {
+    width: 100%;
+    background-color: black;
+}
+
+header nav {
+    color: #efb810;
+    font-size: 1.25rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.EnlaceLogo {
+    margin: 0 auto 0 1.563rem;
+    width: 5rem;
+    background-color: #efb810;
+    padding: 0;
+}
+
+.EnlaceLogo:hover {
+    background-color: white;
+    transition: 0.5s;
+}
+
+header nav a {
+    height: 100%;
+    width: 11rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #efb810;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+header nav a:hover {
+    color: black;
+    background-color: #efb810;
+}
+
+.activo {
+    background-color: #efb810;
+    color: #000000;
+    height: 4.375rem;
+    padding-top: 0.3125rem;
+    border-bottom: 0.3125rem solid #000000;
+}
+
+.activo:hover {
+    height: 4.375rem;
+}
+
+body {
+    margin: 0;
+    background-image: url('../Fotos-Proyecto/Logo-Fondo/fondo.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Elementos tabs */
+.contenedor{
+    position: absolute;
+    top: 100px;
+    width: 90%;
+    max-width: 120em;
+    height: 700px;
+}
+
+.contenedor .ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+}
+
+.contenedor .li{
+    position: relative;
+    left: 0;
+    background-color: #efb810;
+    color: #000000;
+    padding: 1em;
+    margin:0 0.05em 0 0;
+    transition: all .5s ease;
+    cursor: pointer;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.contenedor .li.active{
+    background-color: #000000;
+    color: #efb810;
+}
+
+.contenedor .subcontenedor{
+    min-height: 10vh;
+    position: relative;
+    top: 0;
+    left: 25px;
+}
+
+.contenedor .bloque{
+    background-color: green;
+    margin:1em;
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+.contenedor .bloque.active{
+    position: relative;
+    opacity: 1;
+    transform: translateY(0%);
+    width: 95.6%;
+    top: -16px;
+    height: 580px;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoEvento {
+    text-align: justify;
+    justify-content: center;
+    align-content: center;
+    color: #efb810;
+    margin-left: 30%;
+}
+
+.infoEvento h1{
+    font-family: 'Josefin Slab';
+    margin-top: 10%;
+    font-size: 35px;
+}
+
+#video {
+    position: absolute;
+    top: -30px;
+}
+
+.infoEvento p{
+    font-family: 'Josefin Slab';
+    font-size: 20px;
+}
+
+.contenedor .bloque.active video {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+}
+
+.contenedor .bloque.active img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+}
+/* Elemenos pie de pagina */
+footer {
+    background: #000000;
+    position: absolute;
+    width: 100%;
+    display: inline-flex;
+    height: 75px;
+    left: 0;
+    bottom: 0;
+    color: #efb810;
+}
+
+.tituloPDP{
+    font-size: 15px;
+    font-weight: 100;
+    text-align: left;
+}
+
+footer li{
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    line-height: 1.2;
+}
+
+footer li a{
+    color: #efb810;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+footer a:hover{
+    color: #000000;
+    background-color: #efb810;
+    text-align: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    text-decoration: none;
+}
+
+.contactanos{
+    margin-left: 30%;
+}
+
+.horario{
+    margin-left: 5%;
+}
+
+.siguenos{
+    margin-left: 5%;
+}
