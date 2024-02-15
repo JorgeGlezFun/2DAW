@@ -1,25 +1,33 @@
-document.addEventListener('DOMContentLoaded', ()=> {
-    document.getElementById('ciudad').addEventListener('input', ()=>{
-        var texto = this.value;
-        if (texto.length) {
-            fetch('ciudadessugerencias.php?input=' + texto);
-                .then((respuesta)=>{
-                    if (!respuesta.ok){
-                        return true
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('ciudad').addEventListener('input', function() {
+        var inputText = this.value;
+        if (inputText.length) {
+            fetch('ciudadessugerencias.php?input=' + inputText)
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw new Error('Error en la respuesta de la solicitud.');
                     }
-                    return respuesta.json();
-                });
-
-                .then((dato)=>{
-                    sugerencias(dato);
-                });
-
-                .catch((error)=>{
-                    console.error('Error en la solicitud',error);
+                    return response.json();
+                })
+                .then(function(data) {
+                    sugerencias(data);
+                })
+                .catch(function(error) {
+                    console.error('Error en la solicitud:', error);
                 });
         } else {
             document.getElementById('sugerencias').innerHTML = '';
         }
-    })
-})
-ciudades()
+    });
+
+    function sugerencias(sugerencias) {
+        var listaSugerencias = document.getElementById('sugerencias');
+        listaSugerencias.innerHTML = '';
+        sugerencias.forEach(function(ciudad) {
+            var li = document.createElement('li');
+            var textoLi = document.createTextNode(ciudad);
+            li.appendChild(textoLi);
+            listaSugerencias.appendChild(li);
+        });
+    }
+});
