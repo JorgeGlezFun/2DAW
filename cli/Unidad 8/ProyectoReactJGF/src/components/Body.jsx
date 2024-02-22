@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png'
+import juego1 from '../assets/juego1.jpg'
 import '../assets/App.css'
 
 function Body() {
@@ -6,12 +6,37 @@ function Body() {
   return (
     <>
       <main>
-        <nav>
-          <a><img src={logo} alt="Logo Cabecera"></img></a>
-          <a href="">Inicio</a>
-          <a href="">Tienda</a>
-          <a href="">Quienes somos</a>
-        </nav>
+        <div className='banner'>
+          <h1>¡Bienvenido a MemoGames!</h1>
+          <h3>Tu tienda de videojuegos favorita</h3>
+        </div>
+        <div>
+          <h2>Algunos de nuestros juegos mas vendidos: </h2>
+          <div class="producto">
+            <img src={juego1} alt="Nombre del Producto"/>
+              <div className="contenido">
+                <h2>Jak & Daxter</h2>
+                <p>Embarcate en una increible aventura con este dúo icónico de Playstation</p>
+                <p className="precio">20.99€</p>
+              </div>
+          </div>
+          <div class="producto">
+            <img src={juego1} alt="Nombre del Producto"/>
+              <div className="contenido">
+                <h2>Jak & Daxter</h2>
+                <p>Embarcate en una increible aventura con este dúo icónico de Playstation</p>
+                <p className="precio">20.99€</p>
+              </div>
+          </div>
+          <div class="producto">
+            <img src={juego1} alt="Nombre del Producto"/>
+              <div className="contenido">
+                <h2>Jak & Daxter</h2>
+                <p>Embarcate en una increible aventura con este dúo icónico de Playstation</p>
+                <p className="precio">20.99€</p>
+              </div>
+          </div>
+        </div>
       </main>
     </>
   )

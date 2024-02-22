@@ -33,7 +33,7 @@ header img {
 }
 
 .carrito:hover{
-  background-color: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
   transition: 0.5s ease;
 }
 
@@ -78,11 +78,68 @@ body {
 
 main {
   height: 100%;
-  max-height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   margin: 0;
 }
+
+main div {
+  height: 47.5rem;
+  background: linear-gradient(180deg, black, grey);
+  color: white;
+}
+
+main div h2 {
+  text-align: center;
+}
+
+main .banner {
+  height: 100%;
+  background: linear-gradient(0deg, blue, purple);
+  color: white;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto {
+  height: 30rem;
+  border: 0.128rem solid #ccc;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  width: 18.75rem;
+  margin: 2rem;
+  display: inline-block;
+  color: white;
+}
+
+.producto img {
+  width: 100%;
+  display: block;
+}
+
+.producto .contenido {
+  padding: 0.625rem;
+  height: auto;
+}
+
+.producto h2 {
+  margin-top: 0;
+  margin-bottom: 0.313rem;
+}
+
+.producto p {
+  margin: 0;
+}
+
+.producto .precio {
+  font-weight: bold;
+  text-align: right;
+}
+
+
 
 footer {
   width: 100%;
@@ -90,6 +147,7 @@ footer {
   min-height: 5rem;
   display: flex;
   justify-content: center;
+  margin-top: auto;
 }
 
 footer ul {
