@@ -19,22 +19,30 @@ header nav {
   align-items: center;
 }
 
-header img {
+.logo {
   margin: 0 auto 0 1.563rem;
   width: 5rem;
   padding: 0;
 }
 
-.carrito {
-  margin: 0 auto 0 1.563rem;
-  width: 2rem;
-  padding: 0;
-  background-color: white;
+.logo img {
+  width: 5rem;
 }
 
-.carrito:hover{
+.carrito {
+  margin: 0 2rem 0 2rem;
+  width: auto;
+  padding: 0;
+}
+
+.carrito img {
+  background-color: white;
+  width: 2rem;
+}
+
+.carrito img:hover{
   background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-  transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
 }
 
 header nav a {
@@ -71,6 +79,7 @@ header nav a:hover {
 
 body {
   margin: 0;
+  background-color: #000000;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -85,7 +94,7 @@ main {
 }
 
 main div {
-  height: 47.5rem;
+  height: auto/* 47.5rem */;
   background: linear-gradient(180deg, black, grey);
   color: white;
 }
@@ -104,20 +113,27 @@ main .banner {
   align-items: center;
 }
 
+.juegos {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
 .producto {
-  height: 30rem;
+  height: auto;
   border: 0.128rem solid #ccc;
   border-radius: 0.75rem;
   overflow: hidden;
   width: 18.75rem;
   margin: 2rem;
-  display: inline-block;
   color: white;
 }
 
 .producto img {
   width: 100%;
-  display: block;
+  display: flex;
 }
 
 .producto .contenido {
@@ -126,6 +142,7 @@ main .banner {
 }
 
 .producto h2 {
+  text-align: left;
   margin-top: 0;
   margin-bottom: 0.313rem;
 }
@@ -134,12 +151,28 @@ main .banner {
   margin: 0;
 }
 
+.producto button {
+  color: white;
+  border: 0;
+  width: 100%;
+  font-size: 1.25rem;
+  height: 3rem;
+  background-size: 300% 400%;
+  transition: all .4s ease-in-out;
+
+  background-image: linear-gradient(180deg, purple,     blue, cyan, pink);
+}
+
+.producto button:hover {
+  color: black;
+  background-position: 0% 100%;
+  transition: all .4s ease-in-out;
+}
+
 .producto .precio {
   font-weight: bold;
   text-align: right;
 }
-
-
 
 footer {
   width: 100%;
@@ -161,7 +194,6 @@ footer ul, a {
   color: white;
   background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
   background-clip: text;
-  -webkit-background-clip: text;
   display: inline-block;
   list-style: none;
 }

@@ -8,11 +8,11 @@ function Header() {
     <>
       <header>
         <nav>
-          <a><img src={logo} alt="Logo Cabecera"/></a>
+          <a className="logo"><img src={logo} alt="Logo Cabecera"/></a>
           <a href="">Inicio</a>
           <a href="">Tienda</a>
           <a href="">Quienes somos</a>
-          <a href=""><img src={carrito} alt="Logo Carrito" className='carrito'/></a>
+          <a href="" className='carrito'><img src={carrito} alt="Logo Carrito"/></a>
         </nav>
       </header>
     </>
