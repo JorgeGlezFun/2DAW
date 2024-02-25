@@ -179,6 +179,8 @@ main {
 .producto img {
   width: 80%;
   margin: 0.5rem 0 0 0;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .producto .contenido {
@@ -226,6 +228,60 @@ button:hover {
   background-color: #faf0fe;
 }
 
+.juegosCarrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin: auto;
+  width: auto;
+  margin: 0.5rem 0 0 0;
+}
+
+.productoCarrito {
+  border-bottom: 0.25rem solid #000000 ;
+  height: auto;
+  overflow: hidden;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease-in-out;
+}
+
+.productoCarrito img {
+  width: 10rem;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.productoCarrito .contenidoCarrito {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.productoCarrito h2 {
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 0 2rem;
+  width: auto;
+}
+
+.productoCarrito h3 {
+  padding: 0;
+  margin: 0 0 0 2rem;
+}
+
+.carritoVacio {
+  font-size: 2rem;
+  font-weight: 700;
+}
+/* Elementos Footer*/
 footer {
   width: 100%;
   background-color: #2f373a;
