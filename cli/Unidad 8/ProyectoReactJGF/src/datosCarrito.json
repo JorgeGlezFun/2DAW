@@ -1,4 +1,11 @@
 {
     "carrito": [
+        {
+            "id": 0,
+            "nombre": "Jak & Daxter",
+            "imagen": "..\/src\/assets\/juego1.jpg",
+            "precio": "9.99\u20ac",
+            "cantidad": 2
+        }
     ]
 }

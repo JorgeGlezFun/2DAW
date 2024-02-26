@@ -8,15 +8,18 @@ const Productos = ({ productos }) => {
     }
 
     function addCarrito(id) {
-        console.log('http://localhost:5173/src/Carrito.php?id=' + id);
-        fetch('http://localhost:5173/src/Carrito.php?id=' + id)
+        fetch('http://0.0.0.0:8000/src/Carrito.php?operation=add&id=' + id)
             .then(response => {
                 if (response.ok) {
-                    /* window.location.href = 'http://localhost:5173/Cart' */
-                    window.alert("Producto añadido al carrito")
+                    console.log('Producto añadido al carrito con éxito');
+                    window.location.href = 'http://localhost:5173/Cart'
                 }
             })
+            .catch(error => {
+                console.error('Error al añadir producto al carrito:', error);
+            });
     }
+
 
     return (
         <div>
@@ -29,7 +32,7 @@ const Productos = ({ productos }) => {
                                 <h3>{producto.nombre}</h3>
                                 <p className="precio">Desde tan solo <span>{producto.precio}</span></p>
                             </div>
-                            <Button accion={() => addCarrito(producto.id)} />
+                            <Button class='anadirCarrito' texto='Añadir al carrito' accion={() => addCarrito(producto.id)} />
                         </div>
                     ))}
                 </div>

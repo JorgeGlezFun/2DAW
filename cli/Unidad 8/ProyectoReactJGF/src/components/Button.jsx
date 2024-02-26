@@ -3,7 +3,7 @@ import '../assets/App.css';
 
 function Button(props) {
   return (
-    <button onClick={props.accion}>Añadir al carrito</button>
+    <button className={props.class} onClick={props.accion}>{props.texto}</button>
   );
 }
 
