@@ -1,0 +1,7 @@
+Para iniciar la aplicación, debes de ir a la carpeta de ProyectoReactJGF, una vez ahí escribes los siguientes comandos:
+npm install -> Para instalar los servicios de npm en la carpeta que has descargado
+npm run dev -> Para iniciar la aplicación
+php -S 0.0.0.0:8000 -t . -> Para que las funciones asíncronas funcionen correctamente
+
+En caso de no tener instalado "npm":
+sudo apt install npm

@@ -1,0 +1,109 @@
+{
+  "juegos": [
+    {
+      "id": 0,
+      "nombre": "Jak & Daxter",
+      "imagen": "../src/assets/juego1.jpg",
+      "precio": "9.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 1,
+      "nombre": "Rocket League",
+      "imagen": "../src/assets/juego2.jpg",
+      "precio": "3.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Bloodborne",
+      "imagen": "../src/assets/juego3.jpg",
+      "precio": "20.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 3,
+      "nombre": "NieR: Replicant",
+      "imagen": "../src/assets/juego4.jpg",
+      "precio": "30.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 4,
+      "nombre": "Elden Ring",
+      "imagen": "../src/assets/juego5.jpg",
+      "precio": "59.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 5,
+      "nombre": "Ratchet & Clank: Rift Apart",
+      "imagen": "../src/assets/juego6.jpg",
+      "precio": "59.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 6,
+      "nombre": "The Binding of Isaac: Afterbirth",
+      "imagen": "../src/assets/juego7.jpg",
+      "precio": "10.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 7,
+      "nombre": "Animal Crossing: New Horizons",
+      "imagen": "../src/assets/juego8.jpg",
+      "precio": "45.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 8,
+      "nombre": "Star Wars: Jedi Fallen Order",
+      "imagen": "../src/assets/juego9.jpg",
+      "precio": "20.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 9,
+      "nombre": "Pokémon Escarlata / Purpura",
+      "imagen": "../src/assets/juego10.jpg",
+      "precio": "60.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 10,
+      "nombre": "Final Fansasy VII",
+      "imagen": "../src/assets/juego11.jpg",
+      "precio": "69.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 11,
+      "nombre": "Lethal Company",
+      "imagen": "../src/assets/juego12.jpg",
+      "precio": "4.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 12,
+      "nombre": "Project Zomboid",
+      "imagen": "../src/assets/juego13.jpg",
+      "precio": "10.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 13,
+      "nombre": "NieR: Automata",
+      "imagen": "../src/assets/juego14.jpg",
+      "precio": "15.99€",
+      "cantidad": 1
+    },
+    {
+      "id": 14,
+      "nombre": "Battlefield 2042",
+      "imagen": "../src/assets/juego15.jpg",
+      "precio": "35.99€",
+      "cantidad": 1
+    }
+  ]
+}
